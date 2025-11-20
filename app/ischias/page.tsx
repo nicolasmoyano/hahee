@@ -1,18 +1,29 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
+import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
+import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Behandling av Ischias | Naprapat Hanna",
+  title: "Behandling av Ischias i Stockholm | Naprapat Hanna",
   description:
-    "Professionell naprapatbehandling för ischias och ischiassmärta. Lindra smärtan som strålar ner i benet. Boka din tid för effektiv behandling.",
+    "Professionell naprapatbehandling för ischias och ischiassmärta i Stockholm. Lindra smärtan som strålar från ryggen ner i benet. Boka din tid för effektiv behandling av ischias.",
+  keywords:
+    "ischias, ischiassmärta, ischias behandling, diskbråck, nervsmärta, naprapat stockholm",
+  openGraph: {
+    title: "Behandling av Ischias | Naprapat Hanna",
+    description:
+      "Professionell naprapatbehandling för ischias. Boka din tid idag.",
+    type: "website",
+  },
 };
 
 export default function IschiasPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomBreadcrumbs currentPage="Ischias" />
 
       {/* Hero Section */}
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
@@ -127,6 +138,8 @@ export default function IschiasPage() {
               första behandlingen.
             </p>
           </div>
+
+          <RelatedSymptoms currentSymptom="ischias" />
 
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">

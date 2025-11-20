@@ -88,24 +88,29 @@ export default function AboutContact() {
             {/* About Info - Right */}
             <div className="space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Om Mig
+                Hanna Magnusson
               </h2>
+              <h3>Leg. Naprapat</h3>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Jag är legitimerad naprapatstudent med passion för att hjälpa
-                  människor att må bättre och röra sig friare. Med en holistisk
-                  syn på kroppen arbetar jag för att hitta och behandla
-                  grundorsaken till dina besvär.
+                  Jag är legitimerad naprapat sedan 2018 och arbetar för att
+                  hjälpa dig till en mer rörlig, stark och smärtfri vardag. Min
+                  bakgrund inom dans, yoga och styrketräning har gett mig en
+                  djup förståelse för hur kroppen rör sig och vad som händer när
+                  något inte fungerar som det ska.
                 </p>
                 <p>
-                  Min metod kombinerar manuell behandling med rådgivning om
-                  träning och ergonomi. Jag tror på att varje person är unik och
-                  därför får du alltid en individuellt anpassad behandling.
+                  I mitt arbete fokuserar jag på att hitta den verkliga orsaken
+                  bakom dina besvär. Jag kombinerar manuell behandling med
+                  individanpassade råd kring träning, hållning och återhämtning
+                  för att ge dig långsiktiga resultat, inte bara tillfällig
+                  lindring.
                 </p>
                 <p>
-                  Oavsett om du söker hjälp för kronisk smärta, akuta besvär
-                  eller vill förebygga framtida problem, är du varmt välkommen
-                  till min praktik.
+                  Oavsett om du kommer med akuta problem, långvarig smärta eller
+                  vill förebygga framtida besvär möter jag dig alltid där du är.
+                  Mitt mål är att hjälpa dig bygga en kropp som håller, på
+                  jobbet, i träningen och i vardagen.
                 </p>
               </div>
             </div>

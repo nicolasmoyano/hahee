@@ -4,15 +4,40 @@ import ConsultationForm from "@/components/consultation-form";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Behandling av Ryggsmärta | Naprapat Hanna",
+  title: "Behandling av Ryggsmärta i Stockholm | Naprapat Hanna",
   description:
-    "Professionell naprapatbehandling för ryggsmärta. Få lindring från kronisk och akut ryggsmärta. Boka tid för en individuellt anpassad behandling.",
+    "Professionell naprapatbehandling för ryggsmärta i Stockholm. Få lindring från kronisk och akut ryggsmärta, diskbråck och ischias. Boka tid för individuellt anpassad behandling.",
+  keywords:
+    "ryggsmärta, ryggvärk, ländryggssmärta, diskbråck, naprapat stockholm, ryggbehandling",
+  openGraph: {
+    title: "Behandling av Ryggsmärta | Naprapat Hanna",
+    description:
+      "Professionell naprapatbehandling för ryggsmärta. Boka din tid idag.",
+    type: "website",
+  },
 };
 
 export default function RyggsmartaPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+
+      {/* Breadcrumbs for SEO */}
+      <div className="bg-secondary/30 px-6 py-3">
+        <div className="max-w-4xl mx-auto">
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
+            <a href="/" className="hover:text-foreground transition">
+              Hem
+            </a>
+            <span>/</span>
+            <a href="/#services" className="hover:text-foreground transition">
+              Symptomer
+            </a>
+            <span>/</span>
+            <span className="text-foreground">Ryggsmärta</span>
+          </nav>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
@@ -117,6 +142,62 @@ export default function RyggsmartaPage() {
               Behandlingen är individuellt anpassad efter dina behov och
               inkluderar även rådgivning om ergonomi, träning och hållning.
             </p>
+          </div>
+
+          {/* Related Symptoms - Internal Linking for SEO */}
+          <div className="border-t pt-12">
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              Relaterade Besvär
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Ryggsmärta kan ofta relatera till andra besvär. Läs mer om hur vi
+              behandlar:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <a
+                href="/ischias"
+                className="p-4 border border-border rounded-lg hover:border-primary hover:bg-secondary/50 transition"
+              >
+                <h4 className="font-semibold text-foreground mb-2">Ischias</h4>
+                <p className="text-sm text-muted-foreground">
+                  Smärta som strålar från ryggen ner i benen kan vara ischias.
+                </p>
+              </a>
+              <a
+                href="/nacksmarta"
+                className="p-4 border border-border rounded-lg hover:border-primary hover:bg-secondary/50 transition"
+              >
+                <h4 className="font-semibold text-foreground mb-2">
+                  Nacksmärta
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Nack- och ryggsmärta hänger ofta ihop. Behandla båda för bäst
+                  resultat.
+                </p>
+              </a>
+              <a
+                href="/huvudvark"
+                className="p-4 border border-border rounded-lg hover:border-primary hover:bg-secondary/50 transition"
+              >
+                <h4 className="font-semibold text-foreground mb-2">
+                  Huvudvärk
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Ryggspänningar kan orsaka huvudvärk och migrän.
+                </p>
+              </a>
+              <a
+                href="/idrottsskador"
+                className="p-4 border border-border rounded-lg hover:border-primary hover:bg-secondary/50 transition"
+              >
+                <h4 className="font-semibold text-foreground mb-2">
+                  Idrottsskador
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  Ryggskador från träning behöver professionell behandling.
+                </p>
+              </a>
+            </div>
           </div>
 
           {/* CTA */}

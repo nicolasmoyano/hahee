@@ -1,18 +1,29 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
+import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
+import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Behandling av Nacksmärta | Naprapat Hanna",
+  title: "Behandling av Nacksmärta i Stockholm | Naprapat Hanna",
   description:
-    "Professionell naprapatbehandling för nacksmärta och nackspänningar. Lindra smärta och stelhet i nacke och skuldror. Boka tid idag.",
+    "Professionell naprapatbehandling för nacksmärta och nackspänningar i Stockholm. Lindra smärta, stelhet och huvudvärk från nacken. Boka tid idag för effektiv behandling.",
+  keywords:
+    "nacksmärta, nackspänningar, nackbesvär, whiplash, naprapat stockholm, nackbehandling",
+  openGraph: {
+    title: "Behandling av Nacksmärta | Naprapat Hanna",
+    description:
+      "Professionell naprapatbehandling för nacksmärta. Boka din tid idag.",
+    type: "website",
+  },
 };
 
 export default function NacksmartaPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomBreadcrumbs currentPage="Nacksmärta" />
 
       {/* Hero Section */}
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
@@ -126,6 +137,8 @@ export default function NacksmartaPage() {
               och smärtnivå.
             </p>
           </div>
+
+          <RelatedSymptoms currentSymptom="nacksmarta" />
 
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">

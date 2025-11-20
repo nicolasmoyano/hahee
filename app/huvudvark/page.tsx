@@ -1,18 +1,29 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
+import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
+import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Behandling av Huvudvärk & Spänningar | Naprapat Hanna",
+  title: "Behandling av Huvudvärk & Migrän i Stockholm | Naprapat Hanna",
   description:
-    "Professionell naprapatbehandling för huvudvärk, migrän och spänningshuvudvärk. Få lindring från kronisk huvudvärk. Boka din behandling idag.",
+    "Professionell naprapatbehandling för huvudvärk, migrän och spänningshuvudvärk i Stockholm. Lindra kronisk huvudvärk och nackspänningar. Boka din behandling idag.",
+  keywords:
+    "huvudvärk, migrän, spänningshuvudvärk, nackspänningar, TMJ, naprapat stockholm, huvudvärkbehandling",
+  openGraph: {
+    title: "Behandling av Huvudvärk & Spänningar | Naprapat Hanna",
+    description:
+      "Professionell naprapatbehandling för huvudvärk och migrän. Boka din tid idag.",
+    type: "website",
+  },
 };
 
 export default function HuvudvarkPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomBreadcrumbs currentPage="Huvudvärk" />
 
       {/* Hero Section */}
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
@@ -134,6 +145,8 @@ export default function HuvudvarkPage() {
               regelbunden behandling.
             </p>
           </div>
+
+          <RelatedSymptoms currentSymptom="huvudvark" />
 
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">

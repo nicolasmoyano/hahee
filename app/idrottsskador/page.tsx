@@ -1,18 +1,29 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
+import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
+import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Behandling av Idrottsskador | Naprapat Hanna",
+  title: "Behandling av Idrottsskador i Stockholm | Naprapat Hanna",
   description:
-    "Professionell naprapatbehandling för idrottsskador. Rehab och behandling av träningsskador, muskelskador och överbelastning. Kom tillbaka starkare.",
+    "Professionell naprapatbehandling och rehab för idrottsskador i Stockholm. Behandling av träningsskador, muskelskador, stukning och överbelastning. Kom tillbaka starkare.",
+  keywords:
+    "idrottsskador, träningsskador, muskelskador, rehab, löparknä, tennisarmbåge, naprapat stockholm",
+  openGraph: {
+    title: "Behandling av Idrottsskador | Naprapat Hanna",
+    description:
+      "Professionell naprapatbehandling för idrottsskador. Boka din tid idag.",
+    type: "website",
+  },
 };
 
 export default function IdrottsskadorPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomBreadcrumbs currentPage="Idrottsskador" />
 
       {/* Hero Section */}
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
@@ -136,6 +147,8 @@ export default function IdrottsskadorPage() {
               starkare och mer motståndskraftig för att undvika framtida skador.
             </p>
           </div>
+
+          <RelatedSymptoms currentSymptom="idrottsskador" />
 
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
