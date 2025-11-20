@@ -4,9 +4,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div>
-            <h1 className="font-bold text-2xl text-foreground">
+            <a
+              href="#"
+              className="font-bold text-2xl text-foreground hover:opacity-80 transition"
+            >
               Naprapat Hanna
-            </h1>
+            </a>
           </div>
         </div>
         <nav className="hidden md:flex items-center gap-8">
@@ -17,10 +20,10 @@ export default function Header() {
             Tjänster
           </a>
           <a
-            href="#contact"
+            href="#about"
             className="text-sm text-muted-foreground hover:text-foreground transition"
           >
-            Kontakt
+            Om Mig & Kontakt
           </a>
           <a
             href="#consultation"

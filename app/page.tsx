@@ -1,8 +1,9 @@
-import Header from '@/components/header'
-import Hero from '@/components/hero'
-import Services from '@/components/services'
-import ConsultationForm from '@/components/consultation-form'
-import Footer from '@/components/footer'
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import Services from "@/components/services";
+import AboutContact from "@/components/about-contact";
+import ConsultationForm from "@/components/consultation-form";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <Hero />
       <Services />
       <ConsultationForm />
+      <AboutContact />
       <Footer />
     </main>
-  )
+  );
 }

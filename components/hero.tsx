@@ -61,10 +61,10 @@ export default function Hero() {
               </div>
             ) : heroImage ? (
               <Image
-                src={getBestImageUrl(heroImage, "large")}
+                src={getBestImageUrl(heroImage, "full")}
                 alt={heroImage.altText || "Professionell naprapatbehandling"}
-                width={600}
-                height={400}
+                width={1200}
+                height={800}
                 className="rounded-lg shadow-lg object-cover w-full h-auto"
                 priority
                 sizes="(max-width: 500px) 100vw, (max-width: 768px) 0px, (max-width: 1200px) 50vw, 600px"
@@ -73,8 +73,8 @@ export default function Hero() {
               <Image
                 src={fallbackImageSrc}
                 alt="Professionell naprapatbehandling"
-                width={600}
-                height={400}
+                width={1200}
+                height={800}
                 className="rounded-lg shadow-lg object-cover w-full h-auto"
                 priority
               />
