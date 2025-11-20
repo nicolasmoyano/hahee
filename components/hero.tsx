@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#consultation"
-                className="px-6 pt-3.5 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition text-center"
+                className="px-6 pt-3.5 pb-3.5 max-[500px]:pb-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition text-center"
               >
                 Boka Konsultation
               </a>
@@ -46,14 +46,12 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="hidden md:block relative">
-            {loading && (
+          <div className="relative block" suppressHydrationWarning>
+            {loading ? (
               <div className="rounded-lg bg-secondary animate-pulse h-[400px] w-full shadow-lg flex items-center justify-center">
                 <p className="text-muted-foreground">Loading image...</p>
               </div>
-            )}
-
-            {error && (
+            ) : error ? (
               <div className="rounded-lg bg-destructive/10 border border-destructive/20 h-[400px] w-full shadow-lg flex items-center justify-center">
                 <p className="text-destructive text-sm text-center px-4">
                   Failed to load image from Airtable.
@@ -61,33 +59,25 @@ export default function Hero() {
                   Using fallback image.
                 </p>
               </div>
-            )}
-
-            {!loading && (
-              <>
-                {heroImage ? (
-                  <Image
-                    src={getBestImageUrl(heroImage, "large")}
-                    alt={
-                      heroImage.altText || "Professionell naprapatbehandling"
-                    }
-                    width={600}
-                    height={400}
-                    className="rounded-lg shadow-lg object-cover w-full h-auto"
-                    priority
-                    sizes="(max-width: 768px) 0px, (max-width: 1200px) 50vw, 600px"
-                  />
-                ) : (
-                  <Image
-                    src={fallbackImageSrc}
-                    alt="Professionell naprapatbehandling"
-                    width={600}
-                    height={400}
-                    className="rounded-lg shadow-lg object-cover w-full h-auto"
-                    priority
-                  />
-                )}
-              </>
+            ) : heroImage ? (
+              <Image
+                src={getBestImageUrl(heroImage, "large")}
+                alt={heroImage.altText || "Professionell naprapatbehandling"}
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg object-cover w-full h-auto"
+                priority
+                sizes="(max-width: 500px) 100vw, (max-width: 768px) 0px, (max-width: 1200px) 50vw, 600px"
+              />
+            ) : (
+              <Image
+                src={fallbackImageSrc}
+                alt="Professionell naprapatbehandling"
+                width={600}
+                height={400}
+                className="rounded-lg shadow-lg object-cover w-full h-auto"
+                priority
+              />
             )}
           </div>
         </div>
