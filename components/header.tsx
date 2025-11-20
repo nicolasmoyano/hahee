@@ -71,7 +71,13 @@ export default function Header() {
             href="/#about"
             className="text-sm text-muted-foreground hover:text-foreground transition"
           >
-            Om Mig & Kontakt
+            Om Mig
+          </a>
+          <a
+            href="/#contact"
+            className="text-sm text-muted-foreground hover:text-foreground transition"
+          >
+            Kontakt
           </a>
           <a
             href="/#consultation"
