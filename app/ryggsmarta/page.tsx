@@ -1,0 +1,146 @@
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ConsultationForm from "@/components/consultation-form";
+import { ArrowRight } from "lucide-react";
+
+export const metadata = {
+  title: "Behandling av Ryggsmärta | Naprapat Hanna",
+  description:
+    "Professionell naprapatbehandling för ryggsmärta. Få lindring från kronisk och akut ryggsmärta. Boka tid för en individuellt anpassad behandling.",
+};
+
+export default function RyggsmartaPage() {
+  return (
+    <main className="flex flex-col min-h-screen">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Behandling av Ryggsmärta
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            Naprapatbehandling för att lindra och förebygga ryggsmärta. Få
+            tillbaka din rörlighet och minska smärtan.
+          </p>
+          <a
+            href="#consultation"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
+          >
+            Boka Konsultation
+            <ArrowRight className="h-5 w-5" />
+          </a>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 px-6 bg-background">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* What is it */}
+          <div>
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Vad är Ryggsmärta?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Ryggsmärta är ett av de vanligaste besvären som påverkar människor
+              i alla åldrar. Det kan vara allt från en dov värk till skarp,
+              intensiv smärta som begränsar din vardag. Ryggsmärta kan uppstå
+              plötsligt efter en skada eller utvecklas gradvis över tid på grund
+              av dålig hållning, överbelastning eller muskulär obalans.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Vanliga orsaker till ryggsmärta inkluderar spända muskler,
+              felställda ryggkotor, diskbråck, stress och ensidig belastning
+              från arbete eller träning.
+            </p>
+          </div>
+
+          {/* Symptoms */}
+          <div>
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Vanliga Symtom
+            </h2>
+            <ul className="space-y-2 text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Dov eller skarp smärta i nedre eller övre ryggen</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Stelhet och begränsad rörlighet</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Smärta som strålar ner i benen</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Svårighet att sitta, stå eller böja sig</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">•</span>
+                <span>Muskelspänningar och ömhet</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Treatment */}
+          <div>
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Hur Kan Naprapati Hjälpa?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Som naprapat arbetar jag med att hitta grundorsaken till din
+              ryggsmärta. Genom manuella behandlingstekniker som manipulation,
+              mobilisering och mjukdelsbehandling kan jag:
+            </p>
+            <ul className="space-y-2 text-muted-foreground mb-4">
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">✓</span>
+                <span>Minska smärta och inflammation</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">✓</span>
+                <span>Förbättra rörlighet och flexibilitet</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">✓</span>
+                <span>Återställa muskelbalans</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary mt-1">✓</span>
+                <span>Ge dig verktyg för att förebygga återfall</span>
+              </li>
+            </ul>
+            <p className="text-muted-foreground leading-relaxed">
+              Behandlingen är individuellt anpassad efter dina behov och
+              inkluderar även rådgivning om ergonomi, träning och hållning.
+            </p>
+          </div>
+
+          {/* CTA */}
+          <div className="bg-secondary/50 rounded-lg p-8 text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Redo att Bli Av Med Ryggsmärtan?
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Boka en konsultation idag och ta första steget mot en smärtfri
+              vardag.
+            </p>
+            <a
+              href="#consultation"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
+            >
+              Boka Nu
+              <ArrowRight className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <ConsultationForm />
+      <Footer />
+    </main>
+  );
+}

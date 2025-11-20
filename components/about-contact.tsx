@@ -59,7 +59,7 @@ export default function AboutContact() {
   }, []);
 
   return (
-    <section id="about" className="py-24 px-6 bg-secondary/30">
+    <section id="about" className="pt-14 md:pt-24 pb-24 px-6 bg-secondary/30">
       <div className="max-w-7xl mx-auto space-y-16">
         {/* About Section - Image Left, Info Right */}
         <div
@@ -119,7 +119,7 @@ export default function AboutContact() {
               : "opacity-0 translate-y-20"
           }`}
         >
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="flex flex-col items-center text-center gap-3">
               <div className="p-3 bg-primary/10 rounded-lg">
                 <MapPin className="h-6 w-6 text-primary" />
