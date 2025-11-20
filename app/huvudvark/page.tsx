@@ -18,7 +18,7 @@ export default function HuvudvarkPage() {
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Behandling av Huvudvärk & Spänningar
+            Behandling av huvudvärk & spänningar
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Effektiv naprapatbehandling för huvudvärk, migrän och
@@ -28,7 +28,7 @@ export default function HuvudvarkPage() {
             href="#consultation"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
           >
-            Boka Konsultation
+            Boka konsultation
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
@@ -40,7 +40,7 @@ export default function HuvudvarkPage() {
           {/* What is it */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vad är Huvudvärk & Spänningar?
+              Vad är huvudvärk & spänningar?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Huvudvärk är ett mycket vanligt besvär som kan ha många olika
@@ -59,7 +59,7 @@ export default function HuvudvarkPage() {
           {/* Symptoms */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vanliga Symtom
+              Vanliga symtom
             </h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
@@ -94,7 +94,7 @@ export default function HuvudvarkPage() {
           {/* Treatment */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Hur Kan Naprapati Hjälpa?
+              Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Naprapatbehandling kan vara mycket effektiv för många typer av
@@ -138,7 +138,7 @@ export default function HuvudvarkPage() {
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Slipp Huvudvärken
+              Slipp huvudvärken
             </h3>
             <p className="text-muted-foreground mb-6">
               Boka en konsultation och få hjälp att hitta orsaken till din
@@ -148,7 +148,7 @@ export default function HuvudvarkPage() {
               href="#consultation"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
             >
-              Boka Nu
+              Boka nu
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>

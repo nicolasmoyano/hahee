@@ -18,7 +18,7 @@ export default function IdrottsskadorPage() {
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Behandling av Idrottsskador
+            Behandling av idrottsskador
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Professionell naprapatbehandling och rehab för idrottsskador. Få
@@ -28,7 +28,7 @@ export default function IdrottsskadorPage() {
             href="#consultation"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
           >
-            Boka Konsultation
+            Boka konsultation
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
@@ -40,7 +40,7 @@ export default function IdrottsskadorPage() {
           {/* What is it */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vad är Idrottsskador?
+              Vad är idrottsskador?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Idrottsskador är skador som uppstår i samband med träning eller
@@ -60,7 +60,7 @@ export default function IdrottsskadorPage() {
           {/* Symptoms */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vanliga Symtom
+              Vanliga symtom
             </h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
@@ -93,7 +93,7 @@ export default function IdrottsskadorPage() {
           {/* Treatment */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Hur Kan Naprapati Hjälpa?
+              Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Som naprapat specialiserar jag mig på att behandla och
@@ -140,7 +140,7 @@ export default function IdrottsskadorPage() {
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Kom Tillbaka Starkare
+              Kom tillbaka starkare
             </h3>
             <p className="text-muted-foreground mb-6">
               Boka en konsultation och få en professionell behandlings- och
@@ -150,7 +150,7 @@ export default function IdrottsskadorPage() {
               href="#consultation"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
             >
-              Boka Nu
+              Boka nu
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>

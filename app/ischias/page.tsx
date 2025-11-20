@@ -28,7 +28,7 @@ export default function IschiasPage() {
             href="#consultation"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
           >
-            Boka Konsultation
+            Boka konsultation
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
@@ -59,7 +59,7 @@ export default function IschiasPage() {
           {/* Symptoms */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vanliga Symtom
+              Vanliga symtom
             </h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
@@ -92,7 +92,7 @@ export default function IschiasPage() {
           {/* Treatment */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Hur Kan Naprapati Hjälpa?
+              Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Naprapatbehandling kan vara mycket effektiv för ischias. Jag
@@ -141,7 +141,7 @@ export default function IschiasPage() {
               href="#consultation"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
             >
-              Boka Nu
+              Boka nu
               <ArrowRight className="h-5 w-5" />
             </a>
           </div>

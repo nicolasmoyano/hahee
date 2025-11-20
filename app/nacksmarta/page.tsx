@@ -18,7 +18,7 @@ export default function NacksmartaPage() {
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Behandling av Nacksmärta
+            Behandling av nacksmärta
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Effektiv naprapatbehandling för nacksmärta, stelhet och spänningar.
@@ -28,7 +28,7 @@ export default function NacksmartaPage() {
             href="#consultation"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
           >
-            Boka Konsultation
+            Boka konsultation
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>
@@ -40,7 +40,7 @@ export default function NacksmartaPage() {
           {/* What is it */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vad är Nacksmärta?
+              Vad är nacksmärta?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Nacksmärta är ett vanligt problem som kan påverka din vardag på
@@ -59,7 +59,7 @@ export default function NacksmartaPage() {
           {/* Symptoms */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vanliga Symtom
+              Vanliga symtom
             </h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
@@ -92,7 +92,7 @@ export default function NacksmartaPage() {
           {/* Treatment */}
           <div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Hur Kan Naprapati Hjälpa?
+              Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Naprapatbehandling är mycket effektiv för nacksmärta. Jag arbetar
@@ -130,7 +130,7 @@ export default function NacksmartaPage() {
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Få Lindring från Nacksmärtan
+              Få lindring från nacksmärtan
             </h3>
             <p className="text-muted-foreground mb-6">
               Boka en konsultation och få en individuellt anpassad behandling
