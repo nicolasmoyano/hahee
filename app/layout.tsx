@@ -7,7 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Naprapati Stockholm | Smärtlindring, Behandling & Rehab",
+  title:
+    "Hanna Magnusson naprapat i Stockholm | Smärtlindring, Behandling & Rehab",
   description:
     "Söker du naprapat i Stockholm? Jag erbjuder behandling, smärtlindring och individanpassad rehab för bättre rörlighet och en starkare vardag. Boka tid idag.",
   icons: {
