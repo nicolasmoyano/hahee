@@ -35,7 +35,7 @@ export default function Header() {
               href="/symptomer"
               className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition"
             >
-              Symptomer
+              Symtomer
               <ChevronDown className="h-4 w-4" />
             </a>
             <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -76,7 +76,7 @@ export default function Header() {
             href="/#about"
             className="text-sm text-muted-foreground hover:text-foreground transition"
           >
-            Om Mig
+            Om mig
           </a>
           <a
             href="/#contact"
@@ -88,7 +88,7 @@ export default function Header() {
             href="/#consultation"
             className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition"
           >
-            Boka Nu
+            Boka nu
           </a>
         </nav>
 
@@ -124,14 +124,14 @@ export default function Header() {
               className="text-sm text-muted-foreground hover:text-foreground transition"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Symptomer
+              Symtomer
             </a>
             <div>
               <button
                 className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition w-full ml-4"
                 onClick={() => setMobileSymptomOpen(!mobileSymptomOpen)}
               >
-                Alla symptomer
+                Alla symtomer
                 <ChevronDown
                   className={`h-4 w-4 transition-transform ${
                     mobileSymptomOpen ? "rotate-180" : ""
@@ -184,7 +184,7 @@ export default function Header() {
               className="text-sm text-muted-foreground hover:text-foreground transition"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Om Mig
+              Om mig
             </a>
             <a
               href="/#contact"
@@ -198,7 +198,7 @@ export default function Header() {
               className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Boka Nu
+              Boka nu
             </a>
           </nav>
         </div>
