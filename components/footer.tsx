@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full border-t border-border bg-background">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-bold text-foreground mb-4">
               Naprapat Hanna Magnusson
@@ -19,7 +19,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="text-muted-foreground hover:text-foreground transition"
                 >
                   Tjänster
@@ -27,10 +27,79 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#consultation"
+                  href="/symptomer"
                   className="text-muted-foreground hover:text-foreground transition"
                 >
-                  Boka konsultation
+                  Symptomer
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#about"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Om Mig
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#contact"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Kontakt
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#consultation"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Boka Konsultation
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold text-foreground mb-4">Behandlingar</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="/ryggsmarta"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Ryggsmärta
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/nacksmarta"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Nacksmärta
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/ischias"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Ischias
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/huvudvark"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Huvudvärk
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/idrottsskador"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Idrottsskador
                 </a>
               </li>
             </ul>

@@ -33,16 +33,18 @@ export default function Hero() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#consultation"
+                href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 pt-3.5 pb-3.5 max-[500px]:pb-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition text-center"
               >
-                Boka Konsultation
+                Boka nu
               </a>
               <a
-                href="#services"
+                href="#consultation"
                 className="px-6 py-3 rounded-lg font-medium border-2 border-primary text-green-900 hover:bg-secondary transition text-center"
               >
-                Läs Mer
+                Konsultation
               </a>
             </div>
           </div>
