@@ -1,3 +1,4 @@
+import React from 'react'
 import { ProcessedImage } from '@/app/api/images/route'
 
 export interface ImageFetchOptions {
@@ -121,6 +122,3 @@ export function useAirtableImages(options: ImageFetchOptions = {}) {
 
   return { images, loading, error }
 }
-
-// Need to import React for the hook
-import React from 'react'
