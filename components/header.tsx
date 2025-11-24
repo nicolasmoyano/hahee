@@ -85,7 +85,9 @@ export default function Header() {
             Kontakt
           </a>
           <a
-            href="/#consultation"
+            href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition"
           >
             Boka nu
@@ -194,7 +196,9 @@ export default function Header() {
               Kontakt
             </a>
             <a
-              href="/#consultation"
+              href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
