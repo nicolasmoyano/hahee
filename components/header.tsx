@@ -17,8 +17,9 @@ export default function Header() {
               href="/"
               className="font-bold text-2xl text-foreground hover:opacity-80 transition"
             >
-              Naprapat Hanna
+              Hanna Magnusson
             </a>
+            <p>Leg. Naprapat</p>
           </div>
         </div>
         <nav className="hidden md:flex items-center gap-8">

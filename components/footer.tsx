@@ -107,8 +107,18 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Kontakt</h4>
             <p className="text-sm text-muted-foreground">Stockholm, Sverige</p>
-            <p className="text-sm text-muted-foreground">+46 (0)8 XXX XX XX</p>
-            <p className="text-sm text-muted-foreground">hanna@naprapath.se</p>
+            <a
+              href="tel:+46737853876"
+              className="text-sm text-muted-foreground hover:text-foreground transition block"
+            >
+              +46 73-785 38 76
+            </a>
+            <a
+              href="mailto:hannahahee@gmail.se"
+              className="text-sm text-muted-foreground hover:text-foreground transition block"
+            >
+              hannahahee@gmail.se
+            </a>
           </div>
         </div>
         <div className="border-t border-border pt-8">

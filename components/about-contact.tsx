@@ -144,9 +144,9 @@ export default function AboutContact() {
                     Besöksadress
                   </h3>
                   <p className="text-muted-foreground text-sm">
-                    Exempelgatan 123
+                    Västmannagatan 40
                     <br />
-                    123 45 Stockholm
+                    113 25 Stockholm
                   </p>
                 </div>
               </div>
@@ -160,10 +160,10 @@ export default function AboutContact() {
                     Telefon
                   </h3>
                   <a
-                    href="tel:+46701234567"
+                    href="tel:+46737853876"
                     className="text-muted-foreground text-sm hover:text-primary transition"
                   >
-                    070-123 45 67
+                    +46 73-785 38 76
                   </a>
                 </div>
               </div>
@@ -175,10 +175,10 @@ export default function AboutContact() {
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">E-post</h3>
                   <a
-                    href="mailto:info@naprapathanna.se"
+                    href="mailto:hannahahee@gmail.se"
                     className="text-muted-foreground text-sm hover:text-primary transition"
                   >
-                    info@naprapathanna.se
+                    hannahahee@gmail.se
                   </a>
                 </div>
               </div>
@@ -193,8 +193,6 @@ export default function AboutContact() {
                   </h3>
                   <div className="text-muted-foreground text-sm space-y-1">
                     <p>Mån-Fre: 08:00-18:00</p>
-                    <p>Lör: 09:00-14:00</p>
-                    <p>Sön: Stängt</p>
                   </div>
                 </div>
               </div>
