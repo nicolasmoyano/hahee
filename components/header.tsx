@@ -35,7 +35,7 @@ export default function Header() {
               href="/symptomer"
               className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition"
             >
-              Symtomer
+              Symptomer
               <ChevronDown className="h-4 w-4" />
             </a>
             <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -124,14 +124,14 @@ export default function Header() {
               className="text-sm text-muted-foreground hover:text-foreground transition"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Symtomer
+              Symptomer
             </a>
             <div>
               <button
                 className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition w-full ml-4"
                 onClick={() => setMobileSymptomOpen(!mobileSymptomOpen)}
               >
-                Alla symtomer
+                Alla symptomer
                 <ChevronDown
                   className={`h-4 w-4 transition-transform ${
                     mobileSymptomOpen ? "rotate-180" : ""

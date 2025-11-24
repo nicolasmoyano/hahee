@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, DM_Serif_Text } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const dmSerifText = DM_Serif_Text({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-dm-serif",
+});
 
 export const metadata: Metadata = {
   title:
@@ -49,7 +54,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased ${dmSerifText.variable}`}>
         {children}
         <Analytics />
       </body>

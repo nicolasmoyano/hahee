@@ -69,9 +69,9 @@ export default function IschiasPage() {
 
           {/* Symptoms */}
           <div>
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vanliga symtom
-            </h2>
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              Vanliga symptom
+            </h3>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">•</span>

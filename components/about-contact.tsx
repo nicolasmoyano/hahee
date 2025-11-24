@@ -87,10 +87,12 @@ export default function AboutContact() {
 
             {/* About Info - Right */}
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Hanna Magnusson
-              </h2>
-              <h3>Leg. Naprapat</h3>
+              <div className="">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                  Hanna Magnusson
+                </h2>
+                <h3>Leg. Naprapat</h3>
+              </div>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Jag är legitimerad naprapat sedan 2018 och arbetar för att
