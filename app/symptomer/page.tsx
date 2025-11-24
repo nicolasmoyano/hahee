@@ -209,13 +209,24 @@ export default function SymptomerPage() {
                 Boka din första konsultation idag. Vi skapar en behandlingsplan
                 som är anpassad efter dina behov.
               </p>
-              <Link
-                href="#consultation"
-                className="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors"
-              >
-                Boka kostnadsfri konsultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors"
+                >
+                  Boka nu
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  href="#consultation"
+                  className="inline-flex items-center border-2 border-primary text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-secondary transition-colors"
+                >
+                  Konsultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
