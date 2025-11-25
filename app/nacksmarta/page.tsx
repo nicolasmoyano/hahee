@@ -1,14 +1,23 @@
 "use client";
 
+import { useEffect } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
-import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
+import {
+  trackBookingClick,
+  trackConsultationView,
+  trackSymptomView,
+} from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
 
 export default function NacksmartaPage() {
+  useEffect(() => {
+    trackSymptomView("Nacksmärta");
+  }, []);
+
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
