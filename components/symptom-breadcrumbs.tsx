@@ -11,7 +11,7 @@ export default function SymptomBreadcrumbs({ currentPage }: BreadcrumbsProps) {
             Hem
           </a>
           <span>/</span>
-          <a href="/#services" className="hover:text-foreground transition">
+          <a href="/symptomer" className="hover:text-foreground transition">
             Symptomer
           </a>
           <span>/</span>

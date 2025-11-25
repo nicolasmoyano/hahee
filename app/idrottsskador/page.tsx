@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
@@ -5,20 +7,6 @@ import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
-
-export const metadata = {
-  title: "Behandling av Idrottsskador i Stockholm | Naprapat Hanna",
-  description:
-    "Professionell naprapatbehandling och rehab för idrottsskador i Stockholm. Behandling av träningsskador, muskelskador, stukning och överbelastning. Kom tillbaka starkare.",
-  keywords:
-    "idrottsskador, träningsskador, muskelskador, rehab, löparknä, tennisarmbåge, naprapat stockholm",
-  openGraph: {
-    title: "Behandling av Idrottsskador | Naprapat Hanna",
-    description:
-      "Professionell naprapatbehandling för idrottsskador. Boka din tid idag.",
-    type: "website",
-  },
-};
 
 export default function IdrottsskadorPage() {
   return (

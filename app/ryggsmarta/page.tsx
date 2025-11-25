@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
@@ -7,20 +9,6 @@ import {
   trackSymptomView,
 } from "@/lib/analytics";
 import { ArrowRight } from "lucide-react";
-
-export const metadata = {
-  title: "Behandling av Ryggsmärta i Stockholm | Naprapat Hanna",
-  description:
-    "Professionell naprapatbehandling för ryggsmärta i Stockholm. Få lindring från kronisk och akut ryggsmärta, diskbråck och ischias. Boka tid för individuellt anpassad behandling.",
-  keywords:
-    "ryggsmärta, ryggvärk, ländryggssmärta, diskbråck, naprapat stockholm, ryggbehandling",
-  openGraph: {
-    title: "Behandling av Ryggsmärta | Naprapat Hanna",
-    description:
-      "Professionell naprapatbehandling för ryggsmärta. Boka din tid idag.",
-    type: "website",
-  },
-};
 
 export default function RyggsmartaPage() {
   return (

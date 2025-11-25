@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
@@ -5,20 +7,6 @@ import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
-
-export const metadata = {
-  title: "Behandling av Huvudvärk & Migrän i Stockholm | Naprapat Hanna",
-  description:
-    "Professionell naprapatbehandling för huvudvärk, migrän och spänningshuvudvärk i Stockholm. Lindra kronisk huvudvärk och nackspänningar. Boka din behandling idag.",
-  keywords:
-    "huvudvärk, migrän, spänningshuvudvärk, nackspänningar, TMJ, naprapat stockholm, huvudvärkbehandling",
-  openGraph: {
-    title: "Behandling av Huvudvärk & Spänningar | Naprapat Hanna",
-    description:
-      "Professionell naprapatbehandling för huvudvärk och migrän. Boka din tid idag.",
-    type: "website",
-  },
-};
 
 export default function HuvudvarkPage() {
   return (

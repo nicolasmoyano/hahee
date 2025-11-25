@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
@@ -5,20 +7,6 @@ import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
-
-export const metadata = {
-  title: "Behandling av Nacksmärta i Stockholm | Naprapat Hanna",
-  description:
-    "Professionell naprapatbehandling för nacksmärta och nackspänningar i Stockholm. Lindra smärta, stelhet och huvudvärk från nacken. Boka tid idag för effektiv behandling.",
-  keywords:
-    "nacksmärta, nackspänningar, nackbesvär, whiplash, naprapat stockholm, nackbehandling",
-  openGraph: {
-    title: "Behandling av Nacksmärta | Naprapat Hanna",
-    description:
-      "Professionell naprapatbehandling för nacksmärta. Boka din tid idag.",
-    type: "website",
-  },
-};
 
 export default function NacksmartaPage() {
   return (
