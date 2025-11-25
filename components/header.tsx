@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { trackBookingClick } from "@/lib/analytics";
 
 export default function Header() {
   const [showSymptomMenu, setShowSymptomMenu] = useState(false);
@@ -89,6 +90,7 @@ export default function Header() {
             href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackBookingClick("header_desktop")}
             className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition"
           >
             Boka nu
@@ -201,7 +203,10 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition text-center"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                trackBookingClick("header_mobile");
+                setMobileMenuOpen(false);
+              }}
             >
               Boka nu
             </a>

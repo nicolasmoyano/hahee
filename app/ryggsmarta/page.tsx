@@ -1,21 +1,14 @@
+"use client";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
+import {
+  trackBookingClick,
+  trackConsultationView,
+  trackSymptomView,
+} from "@/lib/analytics";
 import { ArrowRight } from "lucide-react";
-
-export const metadata = {
-  title: "Behandling av Ryggsmärta i Stockholm | Naprapat Hanna",
-  description:
-    "Professionell naprapatbehandling för ryggsmärta i Stockholm. Få lindring från kronisk och akut ryggsmärta, diskbråck och ischias. Boka tid för individuellt anpassad behandling.",
-  keywords:
-    "ryggsmärta, ryggvärk, ländryggssmärta, diskbråck, naprapat stockholm, ryggbehandling",
-  openGraph: {
-    title: "Behandling av Ryggsmärta | Naprapat Hanna",
-    description:
-      "Professionell naprapatbehandling för ryggsmärta. Boka din tid idag.",
-    type: "website",
-  },
-};
 
 export default function RyggsmartaPage() {
   return (
@@ -54,6 +47,7 @@ export default function RyggsmartaPage() {
               href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackBookingClick("symptom_ryggsmarta_hero")}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
             >
               Boka nu
@@ -61,6 +55,7 @@ export default function RyggsmartaPage() {
             </a>
             <a
               href="#consultation"
+              onClick={() => trackConsultationView("symptom_ryggsmarta_hero")}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
             >
               Konsultation
@@ -225,6 +220,7 @@ export default function RyggsmartaPage() {
                 href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackBookingClick("symptom_ryggsmarta_cta")}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
               >
                 Boka nu
@@ -232,6 +228,7 @@ export default function RyggsmartaPage() {
               </a>
               <a
                 href="#consultation"
+                onClick={() => trackConsultationView("symptom_ryggsmarta_cta")}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
               >
                 Konsultation

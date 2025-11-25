@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackConsultationSubmit } from "@/lib/analytics";
 
 const PROBLEM_AREAS = [
   { value: "neck", label: "Nacke- och Skuldervärk" },
@@ -63,8 +64,18 @@ export default function ConsultationForm() {
         throw new Error(errorData.error || "Misslyckades att skicka formulär");
       }
 
+      // Track successful form submission
+      trackConsultationSubmit(formData.problemAreas);
+
       setSuccess(true);
-      setFormData({ firstName: "", lastName: "", email: "", phone: "", problemAreas: [], message: "" });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        problemAreas: [],
+        message: "",
+      });
 
       setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
@@ -95,7 +106,10 @@ export default function ConsultationForm() {
         >
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="firstName"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Förnamn *
               </label>
               <input
@@ -110,7 +124,10 @@ export default function ConsultationForm() {
               />
             </div>
             <div>
-              <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="lastName"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Efternamn *
               </label>
               <input
@@ -125,7 +142,10 @@ export default function ConsultationForm() {
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 E-postadress *
               </label>
               <input
@@ -140,7 +160,10 @@ export default function ConsultationForm() {
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-foreground mb-2"
+              >
                 Telefonnummer *
               </label>
               <input

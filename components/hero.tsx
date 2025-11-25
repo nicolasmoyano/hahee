@@ -1,6 +1,7 @@
 "use client";
 
 import { useAirtableImages, getBestImageUrl } from "@/lib/airtable-images";
+import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
 import Image from "next/image";
 
 export default function Hero() {
@@ -36,12 +37,14 @@ export default function Hero() {
                 href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackBookingClick("hero_home")}
                 className="px-6 pt-3.5 pb-3.5 max-[500px]:pb-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition text-center"
               >
                 Boka nu
               </a>
               <a
                 href="#consultation"
+                onClick={() => trackConsultationView("hero_home")}
                 className="px-6 py-3 rounded-lg font-medium border-2 border-primary text-green-900 hover:bg-secondary transition text-center"
               >
                 Konsultation

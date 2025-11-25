@@ -1,23 +1,12 @@
+"use client";
+
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
+import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
-
-export const metadata = {
-  title: "Behandling av Ischias i Stockholm | Naprapat Hanna",
-  description:
-    "Professionell naprapatbehandling för ischias och ischiassmärta i Stockholm. Lindra smärtan som strålar från ryggen ner i benet. Boka din tid för effektiv behandling av ischias.",
-  keywords:
-    "ischias, ischiassmärta, ischias behandling, diskbråck, nervsmärta, naprapat stockholm",
-  openGraph: {
-    title: "Behandling av Ischias | Naprapat Hanna",
-    description:
-      "Professionell naprapatbehandling för ischias. Boka din tid idag.",
-    type: "website",
-  },
-};
 
 export default function IschiasPage() {
   return (
@@ -40,6 +29,7 @@ export default function IschiasPage() {
               href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackBookingClick("symptom_ischias_hero")}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
             >
               Boka nu
@@ -47,6 +37,7 @@ export default function IschiasPage() {
             </a>
             <a
               href="#consultation"
+              onClick={() => trackConsultationView("symptom_ischias_hero")}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
             >
               Konsultation
@@ -166,6 +157,7 @@ export default function IschiasPage() {
                 href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackBookingClick("symptom_ischias_cta")}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
               >
                 Boka nu
@@ -173,6 +165,7 @@ export default function IschiasPage() {
               </a>
               <a
                 href="#consultation"
+                onClick={() => trackConsultationView("symptom_ischias_cta")}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
               >
                 Konsultation
