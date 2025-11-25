@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
+import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
 import { ArrowRight } from "lucide-react";
 
@@ -40,6 +41,7 @@ export default function IdrottsskadorPage() {
               href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackBookingClick("symptom_idrottsskador_hero")}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
             >
               Boka nu
@@ -47,6 +49,9 @@ export default function IdrottsskadorPage() {
             </a>
             <a
               href="#consultation"
+              onClick={() =>
+                trackConsultationView("symptom_idrottsskador_hero")
+              }
               className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
             >
               Konsultation
@@ -175,6 +180,7 @@ export default function IdrottsskadorPage() {
                 href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackBookingClick("symptom_idrottsskador_cta")}
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
               >
                 Boka nu
@@ -182,6 +188,9 @@ export default function IdrottsskadorPage() {
               </a>
               <a
                 href="#consultation"
+                onClick={() =>
+                  trackConsultationView("symptom_idrottsskador_cta")
+                }
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
               >
                 Konsultation
