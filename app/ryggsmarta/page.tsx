@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
@@ -11,6 +12,10 @@ import {
 import { ArrowRight } from "lucide-react";
 
 export default function RyggsmartaPage() {
+  useEffect(() => {
+    trackSymptomView("Ryggsmärta");
+  }, []);
+
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
