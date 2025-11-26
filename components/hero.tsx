@@ -1,20 +1,9 @@
 "use client";
 
-import { useAirtableImages, getBestImageUrl } from "@/lib/airtable-images";
 import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
 import Image from "next/image";
 
 export default function Hero() {
-  // Fetch specific hero image by Airtable recordId
-  const { images, loading, error } = useAirtableImages({
-    recordId: "rec9R08imqJdTuY9g",
-  });
-
-  // Get the first image or fallback
-  const heroImage = images[0];
-  const fallbackImageSrc =
-    "/naprapat-therapist-performing-wellness-treatment.jpg";
-
   return (
     <section className="relative w-full py-24 md:py-40 px-6 bg-linear-to-b from-secondary to-background">
       <div className="max-w-7xl mx-auto">
@@ -51,22 +40,15 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="relative block" suppressHydrationWarning>
-            {loading ? (
-              <div className="rounded-lg bg-secondary animate-pulse h-[400px] w-full shadow-lg flex items-center justify-center">
-                <p className="text-muted-foreground">Loading image...</p>
-              </div>
-            ) : heroImage ? (
-              <Image
-                src={getBestImageUrl(heroImage, "full")}
-                alt={heroImage.altText || "Professionell naprapatbehandling"}
-                width={1200}
-                height={800}
-                className="rounded-lg shadow-lg object-cover w-full h-auto"
-                priority
-                sizes="(max-width: 500px) 100vw, (max-width: 768px) 0px, (max-width: 1200px) 50vw, 600px"
-              />
-            ) : null}
+          <div className="relative block">
+            <Image
+              src="/hero-image.png"
+              alt="Professionell naprapatbehandling"
+              width={1200}
+              height={800}
+              className="rounded-lg shadow-lg object-cover w-full h-auto"
+              priority
+            />
           </div>
         </div>
       </div>
