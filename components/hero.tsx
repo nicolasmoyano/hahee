@@ -56,14 +56,6 @@ export default function Hero() {
               <div className="rounded-lg bg-secondary animate-pulse h-[400px] w-full shadow-lg flex items-center justify-center">
                 <p className="text-muted-foreground">Loading image...</p>
               </div>
-            ) : error ? (
-              <div className="rounded-lg bg-destructive/10 border border-destructive/20 h-[400px] w-full shadow-lg flex items-center justify-center">
-                <p className="text-destructive text-sm text-center px-4">
-                  Failed to load image from Airtable.
-                  <br />
-                  Using fallback image.
-                </p>
-              </div>
             ) : heroImage ? (
               <Image
                 src={getBestImageUrl(heroImage, "full")}
@@ -74,16 +66,7 @@ export default function Hero() {
                 priority
                 sizes="(max-width: 500px) 100vw, (max-width: 768px) 0px, (max-width: 1200px) 50vw, 600px"
               />
-            ) : (
-              <Image
-                src={fallbackImageSrc}
-                alt="Professionell naprapatbehandling"
-                width={1200}
-                height={800}
-                className="rounded-lg shadow-lg object-cover w-full h-auto"
-                priority
-              />
-            )}
+            ) : null}
           </div>
         </div>
       </div>
