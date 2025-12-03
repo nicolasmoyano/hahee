@@ -158,7 +158,7 @@ export default function RyggsmartaPage() {
           {/* Related Symptoms - Internal Linking for SEO */}
           <div className="border-t pt-12">
             <h3 className="text-2xl font-bold text-foreground mb-6">
-              Relaterade Besvär
+              Relaterade besvär
             </h3>
             <p className="text-muted-foreground mb-6">
               Ryggsmärta kan ofta relatera till andra besvär. Läs mer om hur vi

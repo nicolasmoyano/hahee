@@ -27,8 +27,9 @@ export const trackButtonClick = (buttonName: string, location: string) => {
  * Track booking button clicks
  */
 export const trackBookingClick = (source: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'booking_initiated', {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'booking_initiated',
       source: source,
       event_category: 'engagement',
       event_label: 'Boka nu',
@@ -40,8 +41,9 @@ export const trackBookingClick = (source: string) => {
  * Track consultation form views
  */
 export const trackConsultationView = (source: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'consultation_form_view', {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'consultation_form_view',
       source: source,
       event_category: 'engagement',
     });
@@ -52,8 +54,9 @@ export const trackConsultationView = (source: string) => {
  * Track consultation form submissions
  */
 export const trackConsultationSubmit = (problemAreas: string[]) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'consultation_submit', {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'consultation_submit',
       problem_areas: problemAreas.join(', '),
       event_category: 'conversion',
       event_label: 'Form Submission',
@@ -65,8 +68,9 @@ export const trackConsultationSubmit = (problemAreas: string[]) => {
  * Track symptom page views
  */
 export const trackSymptomView = (symptomName: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'symptom_page_view', {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'symptom_page_view',
       symptom: symptomName,
       event_category: 'engagement',
     });

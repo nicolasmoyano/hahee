@@ -203,7 +203,7 @@ export default function SymptomerPage() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-secondary/50 rounded-lg p-8 text-center">
               <h2 className="text-3xl font-bold text-foreground mb-4">
-                Redo att Må Bättre?
+                Redo att må bättre?
               </h2>
               <p className="text-muted-foreground mb-8">
                 Boka din första konsultation idag. Vi skapar en behandlingsplan
