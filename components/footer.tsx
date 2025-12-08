@@ -10,8 +10,8 @@ export default function Footer() {
               Naprapat Hanna Magnusson
             </h3>
             <p className="text-sm text-muted-foreground">
-              Professionell naprapatservice dedikerad till din hälsa och
-              smärtlindring.
+              Legitimerad naprapat som hjälper dig minska smärta, förbättra
+              funktion och hitta långsiktiga lösningar.
             </p>
           </div>
           <div>
