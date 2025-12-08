@@ -1,18 +1,10 @@
 "use client";
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { useAirtableImages, getBestImageUrl } from "@/lib/airtable-images";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function AboutContact() {
-  // Fetch profile image from Airtable using specific record ID
-  const { images, loading } = useAirtableImages({
-    recordId: "rec6YTEsJtXpjeLcT",
-  });
-
-  const profileImage = images[0];
-
   const aboutRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const [aboutVisible, setAboutVisible] = useState(false);
@@ -73,16 +65,14 @@ export default function AboutContact() {
           >
             {/* Profile Image - Left */}
             <div className="relative w-4/5 aspect-square overflow-hidden rounded-lg shadow-lg mx-auto md:mx-0">
-              {profileImage && !loading && (
-                <Image
-                  src={getBestImageUrl(profileImage, "full")}
-                  alt={profileImage.altText || "Naprapatstudent"}
-                  width={1200}
-                  height={1200}
-                  className="object-cover object-top w-full h-full"
-                  sizes="(max-width: 768px) 80vw, 40vw"
-                />
-              )}
+              <Image
+                src="/Profile-image.jpg"
+                alt="Hanna Magnusson - Naprapatstudent"
+                width={1200}
+                height={1200}
+                className="object-cover object-top w-full h-full"
+                sizes="(max-width: 768px) 80vw, 40vw"
+              />
             </div>
 
             {/* About Info - Right */}
