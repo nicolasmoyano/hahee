@@ -11,7 +11,7 @@ export default function Footer() {
             </h3>
             <p className="text-sm text-muted-foreground">
               Legitimerad naprapat som hjälper dig minska smärta, förbättra
-              funktion och hitta långsiktiga lösningar.
+              funktion och hitta långsiktiga lösningar
             </p>
           </div>
           <div>
