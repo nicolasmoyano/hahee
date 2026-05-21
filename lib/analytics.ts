@@ -2,11 +2,6 @@
 
 declare global {
   interface Window {
-    gtag: (
-      command: string,
-      action: string,
-      params?: Record<string, any>
-    ) => void;
     dataLayer: any[];
   }
 }
@@ -15,8 +10,9 @@ declare global {
  * Track button clicks
  */
 export const trackButtonClick = (buttonName: string, location: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'button_click', {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'button_click',
       button_name: buttonName,
       location: location,
     });
@@ -81,8 +77,9 @@ export const trackSymptomView = (symptomName: string) => {
  * Track navigation through symptom funnel
  */
 export const trackSymptomFunnel = (step: string, symptomName: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'symptom_funnel', {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'symptom_funnel',
       funnel_step: step,
       symptom: symptomName,
       event_category: 'funnel',
@@ -94,11 +91,11 @@ export const trackSymptomFunnel = (step: string, symptomName: string) => {
  * Track outbound link clicks
  */
 export const trackOutboundLink = (url: string, linkName: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'click', {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'outbound_click',
       event_category: 'outbound',
       event_label: linkName,
-      transport_type: 'beacon',
       url: url,
     });
   }
