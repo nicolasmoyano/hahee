@@ -13,9 +13,9 @@ const dmSerifText = DM_Serif_Text({
 
 export const metadata: Metadata = {
   title:
-    "Hanna Magnusson naprapat i Stockholm | Smärtlindring, Behandling & Rehab",
+    "Naprapat Hanna Magnusson i Stockholm | Smärtlindring & Behandling",
   description:
-    "Söker du naprapat i Stockholm? Jag erbjuder behandling, smärtlindring och individanpassad rehab för bättre rörlighet och en starkare vardag. Boka tid idag.",
+    "Naprapat Hanna Magnusson i Stockholm. Legitimerad naprapat sedan 2018. Boka tid för smärtlindring, behandling och rehab. Västmannagatan 40.",
   icons: {
     icon: [
       {
