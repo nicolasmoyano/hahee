@@ -10,8 +10,8 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div>
-              <h1 class="text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">Naprapat Hanna Magnusson</h1>
-              <h2 class="text-xl">Naprapati för mindre smärta, bättre rörelse och starkare vardag</h2>
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">Naprapat Hanna Magnusson</h1>
+              <h2 className="text-xl">Naprapati för mindre smärta, bättre rörelse och starkare vardag</h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Jag hjälper dig som upplever smärta, stelhet eller begränsad
                 rörlighet – oavsett om det handlar om vardagsbesvär,
