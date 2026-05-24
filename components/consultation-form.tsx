@@ -179,34 +179,33 @@ export default function ConsultationForm() {
             </div>
           </div>
 
-          <div>
-            <label className="block text-sm font-medium text-foreground mb-4">
+          <fieldset>
+            <legend className="block text-sm font-medium text-foreground mb-4">
               Vilka områden orsakar dig smärta eller obehag? *
-            </label>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            </legend>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 list-none p-0 m-0">
               {PROBLEM_AREAS.map((area) => (
-                <label
-                  key={area.value}
-                  className="flex items-center gap-3 cursor-pointer"
-                >
-                  <input
-                    type="checkbox"
-                    name="problemAreas"
-                    value={area.value}
-                    checked={formData.problemAreas.includes(area.value)}
-                    onChange={handleChange}
-                    className="w-4 h-4 rounded border-border cursor-pointer accent-primary"
-                  />
-                  <span className="text-sm text-foreground">{area.label}</span>
-                </label>
+                <li key={area.value}>
+                  <label className="flex items-center gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="problemAreas"
+                      value={area.value}
+                      checked={formData.problemAreas.includes(area.value)}
+                      onChange={handleChange}
+                      className="w-4 h-4 rounded border-border cursor-pointer accent-primary"
+                    />
+                    <span className="text-sm text-foreground">{area.label}</span>
+                  </label>
+                </li>
               ))}
-            </div>
+            </ul>
             {formData.problemAreas.length === 0 && (
               <p className="text-xs text-destructive mt-2">
                 Vänligen välj minst ett område
               </p>
             )}
-          </div>
+          </fieldset>
 
           <div>
             <label
