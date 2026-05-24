@@ -12,6 +12,10 @@ const dmSerifText = DM_Serif_Text({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://naprapat-hanna.se"),
+  alternates: {
+    canonical: "/",
+  },
   title:
     "Naprapat Hanna Magnusson i Stockholm | Smärtlindring & Behandling",
   description:
