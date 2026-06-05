@@ -1,41 +1,31 @@
-"use client";
-
-import { useEffect } from "react";
+import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
-import {
-  trackBookingClick,
-  trackConsultationView,
-  trackSymptomView,
-} from "@/lib/analytics";
-import { ArrowRight } from "lucide-react";
+import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
+import SymptomTracker from "@/components/symptom-tracker";
+import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+
+export const metadata: Metadata = {
+  title: "Ryggsmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+  description:
+    "Behandling av ryggsmärta i Stockholm. Naprapatbehandling för ländryggssmärta, diskbråck och muskelspänningar. Boka tid hos legitimerad naprapat.",
+  alternates: { canonical: "/ryggsmarta" },
+  openGraph: {
+    title: "Ryggsmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+    description:
+      "Behandling av ryggsmärta i Stockholm. Naprapatbehandling för ländryggssmärta, diskbråck och muskelspänningar.",
+    url: "https://naprapat-hanna.se/ryggsmarta",
+    type: "website",
+  },
+};
 
 export default function RyggsmartaPage() {
-  useEffect(() => {
-    trackSymptomView("Ryggsmärta");
-  }, []);
-
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
-
-      {/* Breadcrumbs for SEO */}
-      <div className="bg-secondary/30 px-6 py-3">
-        <div className="max-w-4xl mx-auto">
-          <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-            <a href="/" className="hover:text-foreground transition">
-              Hem
-            </a>
-            <span>/</span>
-            <a href="/#services" className="hover:text-foreground transition">
-              Symptomer
-            </a>
-            <span>/</span>
-            <span className="text-foreground">Ryggsmärta</span>
-          </nav>
-        </div>
-      </div>
+      <SymptomTracker symptom="Ryggsmärta" />
+      <SymptomBreadcrumbs currentPage="Ryggsmärta" />
 
       {/* Hero Section */}
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-24 px-6 bg-linear-to-b from-secondary to-background">
@@ -47,26 +37,7 @@ export default function RyggsmartaPage() {
             Naprapatbehandling för att lindra och förebygga ryggsmärta. Få
             tillbaka din rörlighet och minska smärtan.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackBookingClick("symptom_ryggsmarta_hero")}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-            >
-              Boka nu
-              <ArrowRight className="h-5 w-5" />
-            </a>
-            <a
-              href="#consultation"
-              onClick={() => trackConsultationView("symptom_ryggsmarta_hero")}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-            >
-              Konsultation
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </div>
+          <SymptomCTAButtons source="symptom_ryggsmarta_hero" />
         </div>
       </section>
 
@@ -220,26 +191,7 @@ export default function RyggsmartaPage() {
               Boka en konsultation idag och ta första steget mot en smärtfri
               vardag.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackBookingClick("symptom_ryggsmarta_cta")}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-              >
-                Boka nu
-                <ArrowRight className="h-5 w-5" />
-              </a>
-              <a
-                href="#consultation"
-                onClick={() => trackConsultationView("symptom_ryggsmarta_cta")}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-              >
-                Konsultation
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </div>
+            <SymptomCTAButtons source="symptom_ryggsmarta_cta" />
           </div>
         </div>
       </section>

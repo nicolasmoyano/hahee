@@ -13,9 +13,6 @@ const dmSerifText = DM_Serif_Text({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://naprapat-hanna.se"),
-  alternates: {
-    canonical: "/",
-  },
   title:
     "Naprapat Hanna Magnusson i Stockholm | Smärtlindring & Behandling",
   description:
@@ -47,6 +44,43 @@ export default function RootLayout({
   return (
     <html lang="sv">
       <head>
+        {/* Structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalBusiness",
+              name: "Naprapat Hanna Magnusson",
+              description:
+                "Legitimerad naprapat i Stockholm sedan 2018. Behandling av smärta, stelhet och skador.",
+              url: "https://naprapat-hanna.se",
+              telephone: "+46737853876",
+              email: "hannahahee@gmail.se",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Västmannagatan 40",
+                addressLocality: "Stockholm",
+                postalCode: "113 25",
+                addressCountry: "SE",
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "08:00",
+                  closes: "18:00",
+                },
+              ],
+            }),
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{

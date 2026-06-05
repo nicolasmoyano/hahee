@@ -1,26 +1,31 @@
-"use client";
-
-import { useEffect } from "react";
+import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
-import {
-  trackBookingClick,
-  trackConsultationView,
-  trackSymptomView,
-} from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
-import { ArrowRight } from "lucide-react";
+import SymptomTracker from "@/components/symptom-tracker";
+import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+
+export const metadata: Metadata = {
+  title: "Nacksmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+  description:
+    "Naprapatbehandling för nacksmärta, whiplash och nackspänningar i Stockholm. Effektiv behandling för akuta och kroniska nackbesvär. Boka tid.",
+  alternates: { canonical: "/nacksmarta" },
+  openGraph: {
+    title: "Nacksmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+    description:
+      "Naprapatbehandling för nacksmärta, whiplash och nackspänningar i Stockholm. Effektiv behandling för akuta och kroniska nackbesvär.",
+    url: "https://naprapat-hanna.se/nacksmarta",
+    type: "website",
+  },
+};
 
 export default function NacksmartaPage() {
-  useEffect(() => {
-    trackSymptomView("Nacksmärta");
-  }, []);
-
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomTracker symptom="Nacksmärta" />
       <SymptomBreadcrumbs currentPage="Nacksmärta" />
 
       {/* Hero Section */}
@@ -33,26 +38,7 @@ export default function NacksmartaPage() {
             Effektiv naprapatbehandling för nacksmärta, stelhet och spänningar.
             Få hjälp med både akuta och kroniska nackbesvär.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackBookingClick("symptom_nacksmarta_hero")}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-            >
-              Boka nu
-              <ArrowRight className="h-5 w-5" />
-            </a>
-            <a
-              href="#consultation"
-              onClick={() => trackConsultationView("symptom_nacksmarta_hero")}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-            >
-              Konsultation
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </div>
+          <SymptomCTAButtons source="symptom_nacksmarta_hero" />
         </div>
       </section>
 
@@ -160,26 +146,7 @@ export default function NacksmartaPage() {
               Boka en konsultation och få en individuellt anpassad behandling
               för dina nackbesvär.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackBookingClick("symptom_nacksmarta_cta")}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-              >
-                Boka nu
-                <ArrowRight className="h-5 w-5" />
-              </a>
-              <a
-                href="#consultation"
-                onClick={() => trackConsultationView("symptom_nacksmarta_cta")}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-              >
-                Konsultation
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </div>
+            <SymptomCTAButtons source="symptom_nacksmarta_cta" />
           </div>
         </div>
       </section>

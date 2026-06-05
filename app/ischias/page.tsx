@@ -1,26 +1,31 @@
-"use client";
-
-import { useEffect } from "react";
+import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
-import {
-  trackBookingClick,
-  trackConsultationView,
-  trackSymptomView,
-} from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
-import { ArrowRight } from "lucide-react";
+import SymptomTracker from "@/components/symptom-tracker";
+import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+
+export const metadata: Metadata = {
+  title: "Ischias – Behandling av Nervsmärta i Stockholm | Naprapat Hanna",
+  description:
+    "Naprapatbehandling för ischias och strålande nervsmärta i benet. Hitta grundorsaken och få lindring i Stockholm. Boka tid hos legitimerad naprapat.",
+  alternates: { canonical: "/ischias" },
+  openGraph: {
+    title: "Ischias – Behandling av Nervsmärta i Stockholm | Naprapat Hanna",
+    description:
+      "Naprapatbehandling för ischias och strålande nervsmärta i benet. Hitta grundorsaken och få lindring.",
+    url: "https://naprapat-hanna.se/ischias",
+    type: "website",
+  },
+};
 
 export default function IschiasPage() {
-  useEffect(() => {
-    trackSymptomView("Ischias");
-  }, []);
-
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomTracker symptom="Ischias" />
       <SymptomBreadcrumbs currentPage="Ischias" />
 
       {/* Hero Section */}
@@ -33,26 +38,7 @@ export default function IschiasPage() {
             Effektiv naprapatbehandling för ischias och strålande smärta i ben.
             Få lindring och återfå din rörlighet.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackBookingClick("symptom_ischias_hero")}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-            >
-              Boka nu
-              <ArrowRight className="h-5 w-5" />
-            </a>
-            <a
-              href="#consultation"
-              onClick={() => trackConsultationView("symptom_ischias_hero")}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-            >
-              Konsultation
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </div>
+          <SymptomCTAButtons source="symptom_ischias_hero" />
         </div>
       </section>
 
@@ -161,26 +147,7 @@ export default function IschiasPage() {
               Boka en konsultation idag och få en behandlingsplan som passar
               just dina behov.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackBookingClick("symptom_ischias_cta")}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-              >
-                Boka nu
-                <ArrowRight className="h-5 w-5" />
-              </a>
-              <a
-                href="#consultation"
-                onClick={() => trackConsultationView("symptom_ischias_cta")}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-              >
-                Konsultation
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </div>
+            <SymptomCTAButtons source="symptom_ischias_cta" />
           </div>
         </div>
       </section>

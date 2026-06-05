@@ -10,10 +10,12 @@ export const metadata = {
     "Naprapatbehandling för ryggsmärta, nacksmärta, ischias, huvudvärk och idrottsskador i Stockholm. Upptäck hur naprapati kan hjälpa dig med dina besvär.",
   keywords:
     "naprapati, naprapat stockholm, ryggsmärta, nacksmärta, ischias, huvudvärk, idrottsskador, behandling",
+  alternates: { canonical: "/symptomer" },
   openGraph: {
     title: "Symptom & Behandlingar | Naprapat Hanna",
     description:
       "Professionell naprapatbehandling för olika symptom och besvär i Stockholm.",
+    url: "https://naprapat-hanna.se/symptomer",
     type: "website",
   },
 };

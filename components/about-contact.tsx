@@ -67,7 +67,7 @@ export default function AboutContact() {
             <div className="relative w-4/5 aspect-square overflow-hidden rounded-lg shadow-lg mx-auto md:mx-0">
               <Image
                 src="/Profile-image.jpg"
-                alt="Hanna Magnusson - Naprapatstudent"
+                alt="Hanna Magnusson - Legitimerad naprapat"
                 width={1200}
                 height={1200}
                 className="object-cover object-top w-full h-full"

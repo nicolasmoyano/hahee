@@ -1,26 +1,31 @@
-"use client";
-
-import { useEffect } from "react";
+import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
-import {
-  trackBookingClick,
-  trackConsultationView,
-  trackSymptomView,
-} from "@/lib/analytics";
 import RelatedSymptoms from "@/components/related-symptoms";
-import { ArrowRight } from "lucide-react";
+import SymptomTracker from "@/components/symptom-tracker";
+import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+
+export const metadata: Metadata = {
+  title: "Idrottsskador – Rehab & Behandling i Stockholm | Naprapat Hanna",
+  description:
+    "Professionell naprapatbehandling och rehab för idrottsskador i Stockholm. Snabbare återhämtning och förebyggande av nya skador. Boka tid idag.",
+  alternates: { canonical: "/idrottsskador" },
+  openGraph: {
+    title: "Idrottsskador – Rehab & Behandling i Stockholm | Naprapat Hanna",
+    description:
+      "Professionell naprapatbehandling och rehab för idrottsskador i Stockholm. Snabbare återhämtning och förebyggande av nya skador.",
+    url: "https://naprapat-hanna.se/idrottsskador",
+    type: "website",
+  },
+};
 
 export default function IdrottsskadorPage() {
-  useEffect(() => {
-    trackSymptomView("Idrottsskador");
-  }, []);
-
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomTracker symptom="Idrottsskador" />
       <SymptomBreadcrumbs currentPage="Idrottsskador" />
 
       {/* Hero Section */}
@@ -33,28 +38,7 @@ export default function IdrottsskadorPage() {
             Professionell naprapatbehandling och rehab för idrottsskador. Få
             rätt behandling för snabbare återhämtning och förebygg nya skador.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackBookingClick("symptom_idrottsskador_hero")}
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-            >
-              Boka nu
-              <ArrowRight className="h-5 w-5" />
-            </a>
-            <a
-              href="#consultation"
-              onClick={() =>
-                trackConsultationView("symptom_idrottsskador_hero")
-              }
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-            >
-              Konsultation
-              <ArrowRight className="h-5 w-5" />
-            </a>
-          </div>
+          <SymptomCTAButtons source="symptom_idrottsskador_hero" />
         </div>
       </section>
 
@@ -144,7 +128,7 @@ export default function IdrottsskadorPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Styrke- och stabilitetsträ ning</span>
+                <span>Styrke- och stabilitetsträning</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
@@ -172,28 +156,7 @@ export default function IdrottsskadorPage() {
               Boka en konsultation och få en professionell behandlings- och
               rehabplan för din idrottsskada.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackBookingClick("symptom_idrottsskador_cta")}
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition"
-              >
-                Boka nu
-                <ArrowRight className="h-5 w-5" />
-              </a>
-              <a
-                href="#consultation"
-                onClick={() =>
-                  trackConsultationView("symptom_idrottsskador_cta")
-                }
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
-              >
-                Konsultation
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </div>
+            <SymptomCTAButtons source="symptom_idrottsskador_cta" />
           </div>
         </div>
       </section>
