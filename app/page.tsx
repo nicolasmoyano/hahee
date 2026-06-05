@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Services from "@/components/services";
+import SymptomsPreview from "@/components/symptoms-preview";
 import AboutContact from "@/components/about-contact";
 import ConsultationForm from "@/components/consultation-form";
 import Footer from "@/components/footer";
@@ -23,6 +24,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <SymptomsPreview />
       <ConsultationForm />
       <AboutContact />
       <Footer />

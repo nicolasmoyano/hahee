@@ -53,7 +53,7 @@ export default function AboutContact() {
   return (
     <>
       {/* About Section */}
-      <section id="about" className="pt-14 md:pt-24 pb-24 px-6 bg-secondary/30">
+      <section id="about" className="py-20 px-6 bg-secondary/30">
         <div className="max-w-7xl mx-auto">
           <div
             ref={aboutRef}
@@ -111,7 +111,7 @@ export default function AboutContact() {
       </section>
 
       {/* Hitta Mig Section */}
-      <section id="contact" className="py-24 px-6 bg-background">
+      <section id="contact" className="py-20 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div
             ref={contactRef}

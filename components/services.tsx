@@ -29,7 +29,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="w-full pt-12 md:pt-20 pb-20 px-6 bg-background"
+      className="w-full py-20 px-6 bg-background"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

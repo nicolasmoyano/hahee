@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full py-24 md:py-40 px-6 bg-linear-to-b from-secondary to-background">
+    <section className="relative w-full py-20 px-6 bg-linear-to-b from-secondary to-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
