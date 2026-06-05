@@ -168,7 +168,7 @@ export default function AboutContact() {
                     href="mailto:hannahahee@gmail.se"
                     className="text-muted-foreground text-sm hover:text-primary transition"
                   >
-                    hannahahee@gmail.se
+                    hannahahee@gmail.com
                   </a>
                 </div>
               </div>
