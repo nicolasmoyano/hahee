@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface BreadcrumbsProps {
   currentPage: string;
 }
@@ -7,13 +9,13 @@ export default function SymptomBreadcrumbs({ currentPage }: BreadcrumbsProps) {
     <div className="bg-secondary/30 px-6 py-3">
       <div className="max-w-4xl mx-auto">
         <nav className="flex items-center gap-2 text-sm text-muted-foreground">
-          <a href="/" className="hover:text-foreground transition">
+          <Link href="/" className="hover:text-foreground transition">
             Hem
-          </a>
+          </Link>
           <span>/</span>
-          <a href="/symptomer" className="hover:text-foreground transition">
+          <Link href="/symptomer" className="hover:text-foreground transition">
             Symptomer
-          </a>
+          </Link>
           <span>/</span>
           <span className="text-foreground">{currentPage}</span>
         </nav>

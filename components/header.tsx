@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { trackBookingClick } from "@/lib/analytics";
 
 export default function Header() {
-  const [showSymptomMenu, setShowSymptomMenu] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSymptomOpen, setMobileSymptomOpen] = useState(false);
 
@@ -14,79 +14,86 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div>
-            <a
+            <Link
               href="/"
               className="font-bold text-2xl text-foreground hover:opacity-80 transition"
             >
               Hanna Magnusson
-            </a>
+            </Link>
             <p>Leg. Naprapat</p>
           </div>
         </div>
         <nav className="hidden md:flex items-center gap-8">
-          <a
+          <Link
             href="/#services"
             className="text-sm text-muted-foreground hover:text-foreground transition"
           >
             Tjänster
-          </a>
+          </Link>
 
           {/* Symptomer Dropdown */}
           <div className="relative group">
-            <a
+            <Link
               href="/symptomer"
               className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition"
             >
               Symptomer
               <ChevronDown className="h-4 w-4" />
-            </a>
+            </Link>
             <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <a
+              <Link
                 href="/ryggsmarta"
                 className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition"
               >
                 Ryggsmärta
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/nacksmarta"
                 className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition"
               >
                 Nacksmärta
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/ischias"
                 className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition"
               >
                 Ischias
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/huvudvark"
                 className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition"
               >
                 Huvudvärk
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/idrottsskador"
                 className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary transition"
               >
                 Idrottsskador
-              </a>
+              </Link>
             </div>
           </div>
 
-          <a
+          <Link
+            href="/naprapat-odenplan"
+            className="text-sm text-muted-foreground hover:text-foreground transition"
+          >
+            Odenplan
+          </Link>
+
+          <Link
             href="/#about"
             className="text-sm text-muted-foreground hover:text-foreground transition"
           >
             Om mig
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#contact"
             className="text-sm text-muted-foreground hover:text-foreground transition"
           >
             Kontakt
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
             target="_blank"
             rel="noopener noreferrer"
@@ -94,7 +101,7 @@ export default function Header() {
             className="px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition"
           >
             Boka nu
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -102,6 +109,8 @@ export default function Header() {
           className="md:hidden p-2 text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
           {mobileMenuOpen ? (
             <X className="h-6 w-6" />
@@ -113,28 +122,33 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div
+          id="mobile-navigation"
+          className="md:hidden border-t border-border bg-background"
+        >
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
-            <a
+            <Link
               href="/#services"
               className="text-sm text-muted-foreground hover:text-foreground transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               Tjänster
-            </a>
+            </Link>
 
             {/* Mobile Symptomer Dropdown */}
-            <a
+            <Link
               href="/symptomer"
               className="text-sm text-muted-foreground hover:text-foreground transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               Symptomer
-            </a>
+            </Link>
             <div>
               <button
                 className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition w-full ml-4"
                 onClick={() => setMobileSymptomOpen(!mobileSymptomOpen)}
+                aria-expanded={mobileSymptomOpen}
+                aria-controls="mobile-symptom-links"
               >
                 Alla symptomer
                 <ChevronDown
@@ -144,61 +158,72 @@ export default function Header() {
                 />
               </button>
               {mobileSymptomOpen && (
-                <div className="ml-4 mt-2 flex flex-col gap-2">
-                  <a
+                <div
+                  id="mobile-symptom-links"
+                  className="ml-4 mt-2 flex flex-col gap-2"
+                >
+                  <Link
                     href="/ryggsmarta"
                     className="text-sm text-muted-foreground hover:text-foreground transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Ryggsmärta
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/nacksmarta"
                     className="text-sm text-muted-foreground hover:text-foreground transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Nacksmärta
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/ischias"
                     className="text-sm text-muted-foreground hover:text-foreground transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Ischias
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/huvudvark"
                     className="text-sm text-muted-foreground hover:text-foreground transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Huvudvärk
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/idrottsskador"
                     className="text-sm text-muted-foreground hover:text-foreground transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Idrottsskador
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
 
-            <a
+            <Link
+              href="/naprapat-odenplan"
+              className="text-sm text-muted-foreground hover:text-foreground transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Naprapat Odenplan
+            </Link>
+
+            <Link
               href="/#about"
               className="text-sm text-muted-foreground hover:text-foreground transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               Om mig
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#contact"
               className="text-sm text-muted-foreground hover:text-foreground transition"
               onClick={() => setMobileMenuOpen(false)}
             >
               Kontakt
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
               target="_blank"
               rel="noopener noreferrer"
@@ -209,7 +234,7 @@ export default function Header() {
               }}
             >
               Boka nu
-            </a>
+            </Link>
           </nav>
         </div>
       )}

@@ -165,7 +165,7 @@ export default function AboutContact() {
                 <div>
                   <h3 className="font-semibold text-foreground mb-2">E-post</h3>
                   <a
-                    href="mailto:hannahahee@gmail.se"
+                    href="mailto:hannahahee@gmail.com"
                     className="text-muted-foreground text-sm hover:text-primary transition"
                   >
                     hannahahee@gmail.com
