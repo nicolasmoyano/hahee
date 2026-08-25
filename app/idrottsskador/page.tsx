@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
@@ -153,15 +152,13 @@ export default function IdrottsskadorPage() {
               Kom tillbaka starkare
             </h3>
             <p className="text-muted-foreground mb-6">
-              Boka en konsultation och få en professionell behandlings- och
-              rehabplan för din idrottsskada.
+              Boka ett besök och få en professionell behandlings- och rehabplan
+              för din idrottsskada.
             </p>
             <SymptomCTAButtons source="symptom_idrottsskador_cta" />
           </div>
         </div>
       </section>
-
-      <ConsultationForm />
       <Footer />
     </main>
   );

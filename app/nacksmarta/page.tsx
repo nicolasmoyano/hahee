@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
@@ -143,15 +142,13 @@ export default function NacksmartaPage() {
               Få lindring från nacksmärtan
             </h3>
             <p className="text-muted-foreground mb-6">
-              Boka en konsultation och få en individuellt anpassad behandling
-              för dina nackbesvär.
+              Boka ett besök och få en individuellt anpassad behandling för
+              dina nackbesvär.
             </p>
             <SymptomCTAButtons source="symptom_nacksmarta_cta" />
           </div>
         </div>
       </section>
-
-      <ConsultationForm />
       <Footer />
     </main>
   );

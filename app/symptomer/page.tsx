@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ConsultationForm from "@/components/consultation-form";
+import SymptomCTAButtons from "@/components/symptom-cta-buttons";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -208,37 +208,14 @@ export default function SymptomerPage() {
                 Redo att må bättre?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Boka din första konsultation idag. Vi skapar en behandlingsplan
-                som är anpassad efter dina behov.
+                Boka ditt första besök idag. Hanna gör en individuell bedömning
+                och anpassar behandlingen efter dina behov.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="https://ww1.clinicbuddy.com/onlinebooking/-3366"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors"
-                >
-                  Boka nu
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  href="#consultation"
-                  className="inline-flex items-center border-2 border-primary text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-secondary transition-colors"
-                >
-                  Konsultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </div>
+              <SymptomCTAButtons source="symptomer_cta" />
             </div>
           </div>
         </div>
       </section>
-
-      {/* Consultation Form */}
-      <section id="consultation">
-        <ConsultationForm />
-      </section>
-
       <Footer />
     </main>
   );

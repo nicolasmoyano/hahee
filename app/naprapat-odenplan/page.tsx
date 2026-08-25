@@ -4,7 +4,6 @@ import Link from "next/link";
 import { BadgeCheck, Clock, Languages, MapPin } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ConsultationForm from "@/components/consultation-form";
 import SymptomCTAButtons from "@/components/symptom-cta-buttons";
 
 const PAGE_URL = "https://naprapat-hanna.se/naprapat-odenplan";
@@ -54,7 +53,7 @@ const questions = [
   {
     question: "Hur bokar jag tid?",
     answer:
-      "Använd bokningsknappen för att se aktuella tider i ClinicBuddy. Du kan också skicka en konsultationsförfrågan via formuläret på sidan.",
+      "Använd bokningsknappen för att se aktuella tider i ClinicBuddy. Du kan också ringa Hanna om du är osäker på om hon kan hjälpa dig.",
   },
 ];
 
@@ -348,8 +347,8 @@ export default function NaprapatOdenplanPage() {
               Boka naprapat nära Odenplan
             </h2>
             <p className="mb-8 text-lg text-muted-foreground xl:mb-0">
-              Se aktuella tider och boka direkt, eller skicka en
-              konsultationsförfrågan om du är osäker på om Hanna kan hjälpa dig.
+              Se aktuella tider och boka direkt, eller ring Hanna om du är
+              osäker på om hon kan hjälpa dig.
             </p>
           </div>
           <div className="xl:shrink-0">
@@ -357,8 +356,6 @@ export default function NaprapatOdenplanPage() {
           </div>
         </div>
       </section>
-
-      <ConsultationForm />
       <Footer />
     </main>
   );

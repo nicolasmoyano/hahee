@@ -4,7 +4,6 @@ import Hero from "@/components/hero";
 import Services from "@/components/services";
 import SymptomsPreview from "@/components/symptoms-preview";
 import AboutContact from "@/components/about-contact";
-import ConsultationForm from "@/components/consultation-form";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -25,7 +24,6 @@ export default function Home() {
       <Hero />
       <Services />
       <SymptomsPreview />
-      <ConsultationForm />
       <AboutContact />
       <Footer />
     </main>

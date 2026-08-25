@@ -1,6 +1,6 @@
 "use client";
 
-import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
+import { trackBookingClick, trackButtonClick } from "@/lib/analytics";
 import Image from "next/image";
 
 export default function Hero() {
@@ -31,11 +31,11 @@ export default function Hero() {
                 Boka nu
               </a>
               <a
-                href="#consultation"
-                onClick={() => trackConsultationView("hero_home")}
+                href="tel:+46737853876"
+                onClick={() => trackButtonClick("Ring Hanna", "hero_home")}
                 className="px-6 py-3 rounded-lg font-medium border-2 border-primary text-green-900 hover:bg-secondary transition text-center"
               >
-                Konsultation
+                Ring Hanna
               </a>
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import { trackBookingClick, trackConsultationView } from "@/lib/analytics";
+import { ArrowRight, Phone } from "lucide-react";
+import { trackBookingClick, trackButtonClick } from "@/lib/analytics";
 
 export default function SymptomCTAButtons({ source }: { source: string }) {
   return (
@@ -17,12 +17,12 @@ export default function SymptomCTAButtons({ source }: { source: string }) {
         <ArrowRight className="h-5 w-5" />
       </a>
       <a
-        href="#consultation"
-        onClick={() => trackConsultationView(source)}
+        href="tel:+46737853876"
+        onClick={() => trackButtonClick("Ring Hanna", source)}
         className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
       >
-        Konsultation
-        <ArrowRight className="h-5 w-5" />
+        Ring Hanna
+        <Phone className="h-5 w-5" />
       </a>
     </div>
   );

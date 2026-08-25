@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
@@ -151,15 +150,13 @@ export default function HuvudvarkPage() {
               Slipp huvudvärken
             </h3>
             <p className="text-muted-foreground mb-6">
-              Boka en konsultation och få hjälp att hitta orsaken till din
-              huvudvärk och en behandling som fungerar för dig.
+              Boka ett besök och få hjälp att hitta orsaken till din huvudvärk
+              och en behandling som fungerar för dig.
             </p>
             <SymptomCTAButtons source="symptom_huvudvark_cta" />
           </div>
         </div>
       </section>
-
-      <ConsultationForm />
       <Footer />
     </main>
   );
