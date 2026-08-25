@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { DM_Serif_Text } from "next/font/google";
+import { DM_Serif_Text, Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+});
 const dmSerifText = DM_Serif_Text({
   weight: ["400"],
   subsets: ["latin"],
@@ -161,7 +169,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           rel="stylesheet"
         />
       </head>
-      <body className={`font-sans antialiased ${dmSerifText.variable}`}>
+      <body
+        className={`font-sans antialiased ${geistSans.variable} ${geistMono.variable} ${dmSerifText.variable}`}
+      >
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
