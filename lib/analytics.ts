@@ -2,7 +2,7 @@
 
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: Array<Record<string, unknown>>;
   }
 }
 

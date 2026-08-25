@@ -1,15 +1,104 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, DM_Serif_Text } from "next/font/google";
+import { DM_Serif_Text } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const dmSerifText = DM_Serif_Text({
   weight: ["400"],
   subsets: ["latin"],
   variable: "--font-dm-serif",
 });
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://naprapat-hanna.se/#website",
+      url: "https://naprapat-hanna.se",
+      name: "Naprapat Hanna Magnusson",
+      inLanguage: "sv-SE",
+      publisher: { "@id": "https://naprapat-hanna.se/#business" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://naprapat-hanna.se/#hanna-magnusson",
+      name: "Hanna Magnusson",
+      jobTitle: "Legitimerad naprapat",
+      image: "https://naprapat-hanna.se/Profile-image.jpg",
+      url: "https://naprapat-hanna.se/#about",
+      email: "hannahahee@gmail.com",
+      telephone: "+46737853876",
+      knowsLanguage: ["sv", "en"],
+      knowsAbout: [
+        "Naprapati",
+        "Rygg- och nackbesvär",
+        "Huvudvärk",
+        "Käkledsbesvär",
+        "Idrottsskador",
+        "Rehabilitering",
+      ],
+      worksFor: {
+        "@type": "MedicalBusiness",
+        name: "Rehabkliniken",
+        url: "https://naprapater.com",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Västmannagatan 40",
+          addressLocality: "Stockholm",
+          postalCode: "113 25",
+          addressCountry: "SE",
+        },
+      },
+      sameAs: ["https://naprapater.com/terapeuter/hanna-magnusson"],
+    },
+    {
+      "@type": "MedicalBusiness",
+      "@id": "https://naprapat-hanna.se/#business",
+      name: "Naprapat Hanna Magnusson",
+      description:
+        "Legitimerad naprapat i Vasastan nära Odenplan. Behandling av bland annat rygg- och nackbesvär, huvudvärk, käkledsbesvär och idrottsskador.",
+      url: "https://naprapat-hanna.se",
+      image: "https://naprapat-hanna.se/Profile-image.jpg",
+      telephone: "+46737853876",
+      email: "hannahahee@gmail.com",
+      employee: { "@id": "https://naprapat-hanna.se/#hanna-magnusson" },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Västmannagatan 40",
+        addressLocality: "Stockholm",
+        addressRegion: "Stockholms län",
+        postalCode: "113 25",
+        addressCountry: "SE",
+      },
+      areaServed: [
+        { "@type": "City", name: "Stockholm" },
+        { "@type": "Place", name: "Vasastan" },
+        { "@type": "Place", name: "Odenplan" },
+      ],
+      availableService: [
+        { "@type": "Service", name: "Naprapatbehandling" },
+        { "@type": "Service", name: "Käkledsbehandling" },
+        { "@type": "Service", name: "Dry needling" },
+        { "@type": "Service", name: "Skaderehabilitering" },
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+          ],
+          opens: "08:00",
+          closes: "18:00",
+        },
+      ],
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://naprapat-hanna.se"),
@@ -48,37 +137,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "MedicalBusiness",
-              name: "Naprapat Hanna Magnusson",
-              description:
-                "Legitimerad naprapat i Stockholm sedan 2018. Behandling av smärta, stelhet och skador.",
-              url: "https://naprapat-hanna.se",
-              telephone: "+46737853876",
-              email: "hannahahee@gmail.se",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Västmannagatan 40",
-                addressLocality: "Stockholm",
-                postalCode: "113 25",
-                addressCountry: "SE",
-              },
-              openingHoursSpecification: [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
-                  opens: "08:00",
-                  closes: "18:00",
-                },
-              ],
-            }),
+            __html: JSON.stringify(structuredData),
           }}
         />
         {/* Google Tag Manager */}
