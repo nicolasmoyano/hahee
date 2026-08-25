@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BadgeCheck, Clock, Languages, MapPin } from "lucide-react";
 import Header from "@/components/header";
@@ -127,13 +128,13 @@ export default function NaprapatOdenplanPage() {
         </ol>
       </nav>
 
-      <section className="bg-linear-to-b from-secondary to-background px-6 py-20 md:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
-          <div>
+      <section className="overflow-hidden bg-linear-to-b from-secondary to-background px-6 py-20 md:py-28 xl:pb-14 xl:pt-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 xl:grid-cols-[minmax(0,1.05fr)_minmax(240px,0.62fr)_minmax(330px,0.88fr)] xl:gap-8">
+          <div className="xl:pr-4">
             <p className="mb-4 font-medium text-primary">
               Västmannagatan 40 · Vasastan
             </p>
-            <h1 className="mb-6 text-4xl font-bold text-foreground md:text-5xl">
+            <h1 className="mb-6 text-4xl font-bold text-foreground md:text-5xl xl:text-[3.5rem] xl:leading-[1.05]">
               Legitimerad naprapat nära Odenplan
             </h1>
             <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
@@ -145,7 +146,20 @@ export default function NaprapatOdenplanPage() {
             <SymptomCTAButtons source="naprapat_odenplan_hero" />
           </div>
 
-          <div className="rounded-2xl border border-border bg-card p-8 shadow-sm">
+          <div className="relative hidden min-h-[420px] overflow-hidden rounded-2xl border border-border shadow-sm xl:block">
+            <Image
+              src="/Profile-image.jpg"
+              alt="Hanna Magnusson, legitimerad naprapat"
+              fill
+              sizes="(min-width: 1280px) 280px, 0px"
+              className="object-cover object-[center_18%]"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/70 to-transparent px-6 pb-6 pt-20 text-white">
+              <p className="text-sm font-medium">Personlig behandling i Vasastan</p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-sm xl:p-9">
             <h2 className="mb-6 text-2xl font-bold text-foreground">
               Hanna Magnusson
             </h2>
@@ -171,10 +185,10 @@ export default function NaprapatOdenplanPage() {
         </div>
       </section>
 
-      <section className="bg-background px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-12 max-w-3xl">
-            <h2 className="mb-4 text-3xl font-bold text-foreground">
+      <section className="bg-background px-6 py-16 md:py-20 xl:pb-24 xl:pt-14">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 max-w-3xl xl:grid xl:max-w-none xl:grid-cols-[0.8fr_1.2fr] xl:items-end xl:gap-16">
+            <h2 className="mb-4 text-3xl font-bold text-foreground xl:mb-0 xl:text-4xl">
               Personlig behandling i Vasastan
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
@@ -185,58 +199,58 @@ export default function NaprapatOdenplanPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            <article className="rounded-xl border border-border bg-card p-6">
+          <div className="grid gap-6 md:grid-cols-3 xl:gap-8">
+            <article className="flex flex-col rounded-xl border border-border bg-card p-6 xl:min-h-[260px] xl:p-8">
               <h3 className="mb-3 text-xl font-bold text-foreground">
                 Rygg och nacke
               </h3>
-              <p className="mb-4 text-muted-foreground">
+              <p className="mb-6 text-muted-foreground">
                 Individuell bedömning och behandling vid smärta, stelhet och
                 begränsad rörlighet i rygg, nacke och skuldror.
               </p>
-              <div className="flex flex-wrap gap-3 text-sm">
-                <a href="/ryggsmarta" className="font-medium text-primary hover:underline">
+              <div className="mt-auto flex flex-wrap gap-3 text-sm">
+                <Link href="/ryggsmarta" className="font-medium text-primary hover:underline">
                   Ryggsmärta
-                </a>
-                <a href="/nacksmarta" className="font-medium text-primary hover:underline">
+                </Link>
+                <Link href="/nacksmarta" className="font-medium text-primary hover:underline">
                   Nacksmärta
-                </a>
+                </Link>
               </div>
             </article>
 
-            <article className="rounded-xl border border-border bg-card p-6">
+            <article className="flex flex-col rounded-xl border border-border bg-card p-6 xl:min-h-[260px] xl:p-8">
               <h3 className="mb-3 text-xl font-bold text-foreground">
                 Huvud och käke
               </h3>
-              <p className="mb-4 text-muted-foreground">
+              <p className="mb-6 text-muted-foreground">
                 Hanna arbetar med huvudvärk samt spänningar och besvär som kan
                 vara relaterade till nacke eller käkled.
               </p>
-              <a href="/huvudvark" className="text-sm font-medium text-primary hover:underline">
+              <Link href="/huvudvark" className="mt-auto text-sm font-medium text-primary hover:underline">
                 Läs om huvudvärk
-              </a>
+              </Link>
             </article>
 
-            <article className="rounded-xl border border-border bg-card p-6">
+            <article className="flex flex-col rounded-xl border border-border bg-card p-6 xl:min-h-[260px] xl:p-8">
               <h3 className="mb-3 text-xl font-bold text-foreground">
                 Träning och rehab
               </h3>
-              <p className="mb-4 text-muted-foreground">
+              <p className="mb-6 text-muted-foreground">
                 Stöd vid idrottsskador, överbelastning och återgång till träning
                 med en plan anpassad efter dina förutsättningar.
               </p>
-              <a href="/idrottsskador" className="text-sm font-medium text-primary hover:underline">
+              <Link href="/idrottsskador" className="mt-auto text-sm font-medium text-primary hover:underline">
                 Läs om idrottsskador
-              </a>
+              </Link>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="bg-secondary/30 px-6 py-16 md:py-20">
-        <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-2">
+      <section className="bg-secondary/30 px-6 py-16 md:py-20 xl:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 xl:grid-cols-[0.85fr_1.15fr] xl:gap-20">
           <div>
-            <h2 className="mb-5 text-3xl font-bold text-foreground">
+            <h2 className="mb-5 text-3xl font-bold text-foreground xl:text-4xl">
               Hitta till mottagningen
             </h2>
             <address className="mb-5 not-italic leading-relaxed text-muted-foreground">
@@ -262,7 +276,7 @@ export default function NaprapatOdenplanPage() {
           </div>
 
           <div>
-            <h2 className="mb-5 text-3xl font-bold text-foreground">
+            <h2 className="mb-5 text-3xl font-bold text-foreground xl:text-4xl">
               Så går ett besök till
             </h2>
             <ol className="space-y-5 text-muted-foreground">
@@ -327,16 +341,20 @@ export default function NaprapatOdenplanPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/50 px-6 py-16 text-center">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-4 text-3xl font-bold text-foreground">
-            Boka naprapat nära Odenplan
-          </h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            Se aktuella tider och boka direkt, eller skicka en
-            konsultationsförfrågan om du är osäker på om Hanna kan hjälpa dig.
-          </p>
-          <SymptomCTAButtons source="naprapat_odenplan_cta" />
+      <section className="bg-secondary/50 px-6 py-16 text-center xl:py-20 xl:text-left">
+        <div className="mx-auto max-w-7xl xl:flex xl:items-center xl:justify-between xl:gap-16">
+          <div className="mx-auto max-w-3xl xl:mx-0 xl:max-w-2xl">
+            <h2 className="mb-4 text-3xl font-bold text-foreground xl:text-4xl">
+              Boka naprapat nära Odenplan
+            </h2>
+            <p className="mb-8 text-lg text-muted-foreground xl:mb-0">
+              Se aktuella tider och boka direkt, eller skicka en
+              konsultationsförfrågan om du är osäker på om Hanna kan hjälpa dig.
+            </p>
+          </div>
+          <div className="xl:shrink-0">
+            <SymptomCTAButtons source="naprapat_odenplan_cta" />
+          </div>
         </div>
       </section>
 
