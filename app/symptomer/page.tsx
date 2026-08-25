@@ -208,7 +208,7 @@ export default function SymptomerPage() {
                 Redo att må bättre?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Boka ditt första besök idag. Hanna gör en individuell bedömning
+                Boka ditt första besök idag. Jag gör en individuell bedömning
                 och anpassar behandlingen efter dina behov.
               </p>
               <SymptomCTAButtons source="symptomer_cta" />

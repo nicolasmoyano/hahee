@@ -18,10 +18,10 @@ export default function SymptomCTAButtons({ source }: { source: string }) {
       </a>
       <a
         href="tel:+46737853876"
-        onClick={() => trackButtonClick("Ring Hanna", source)}
+        onClick={() => trackButtonClick("Ring mig", source)}
         className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary text-foreground font-medium hover:bg-secondary transition"
       >
-        Ring Hanna
+        Ring mig
         <Phone className="h-5 w-5" />
       </a>
     </div>

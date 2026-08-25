@@ -14,11 +14,11 @@ Parameters:
 
 ### Phone clicks: `button_click`
 
-Triggered when a visitor clicks **Ring Hanna** in the homepage hero or a symptom-page CTA.
+Triggered when a visitor clicks **Ring mig** in the homepage hero or a symptom-page CTA.
 
 Parameters:
 
-- `button_name` — `Ring Hanna`
+- `button_name` — `Ring mig`
 - `location` — button location
 
 ### Symptom engagement
@@ -35,7 +35,7 @@ Goal: compare the two direct conversion paths.
 
 1. Open **Explore > Funnel exploration**.
 2. Use a page view as the first step.
-3. Use either `booking_initiated` or `button_click` with `button_name = Ring Hanna` as the conversion step.
+3. Use either `booking_initiated` or `button_click` with `button_name = Ring mig` as the conversion step.
 4. Break down results by `source` or `location` to compare pages and placements.
 
 ## Key metrics
@@ -52,7 +52,7 @@ Do not add booking clicks and phone clicks together as unique leads unless user-
 
 1. Open **Reports > Realtime** in GA4.
 2. Click a **Boka nu** button and confirm `booking_initiated` appears.
-3. Click **Ring Hanna** on a device or browser that can handle telephone links and confirm `button_click` appears with `button_name = Ring Hanna`.
+3. Click **Ring mig** on a device or browser that can handle telephone links and confirm `button_click` appears with `button_name = Ring mig`.
 4. Confirm the `source` or `location` parameter identifies the correct CTA.
 
 Events may take 24–48 hours to appear in standard GA4 reports, but they should appear quickly in Realtime or DebugView.

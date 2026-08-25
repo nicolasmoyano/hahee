@@ -11,12 +11,12 @@ const PAGE_URL = "https://naprapat-hanna.se/naprapat-odenplan";
 export const metadata: Metadata = {
   title: "Naprapat Odenplan & Vasastan | Hanna Magnusson",
   description:
-    "Boka tid hos Hanna Magnusson, legitimerad naprapat på Västmannagatan 40 i Vasastan, cirka fem minuter från Odenplan.",
+    "Jag heter Hanna Magnusson och är legitimerad naprapat på Västmannagatan 40 i Vasastan, cirka fem minuter från Odenplan. Boka tid direkt.",
   alternates: { canonical: "/naprapat-odenplan" },
   openGraph: {
     title: "Naprapat nära Odenplan | Hanna Magnusson",
     description:
-      "Personlig naprapatbehandling på Rehabkliniken i Vasastan, cirka fem minuter från Odenplan.",
+      "Jag erbjuder personlig naprapatbehandling på Rehabkliniken i Vasastan, cirka fem minuter från Odenplan.",
     url: PAGE_URL,
     type: "website",
     images: [
@@ -34,26 +34,26 @@ const questions = [
   {
     question: "Var ligger mottagningen?",
     answer:
-      "Hanna tar emot på Rehabkliniken, Västmannagatan 40 i Vasastan. Mottagningen ligger cirka fem minuters promenad från Odenplan och S:t Eriksplan.",
+      "Jag tar emot på Rehabkliniken, Västmannagatan 40 i Vasastan. Mottagningen ligger cirka fem minuters promenad från Odenplan och S:t Eriksplan.",
   },
   {
     question: "Behöver jag en remiss för att boka naprapat?",
     answer:
-      "Nej, du kan boka en tid direkt. Vid besöket går Hanna igenom dina besvär och gör en individuell bedömning innan behandlingen påbörjas.",
+      "Nej, du kan boka en tid direkt. Vid besöket går jag igenom dina besvär och gör en individuell bedömning innan behandlingen påbörjas.",
   },
   {
-    question: "Vilka besvär arbetar Hanna med?",
+    question: "Vilka besvär arbetar du med?",
     answer:
-      "Hanna arbetar bland annat med rygg- och nackbesvär, huvudvärk, käkledsbesvär, muskelspänningar, idrottsskador och rehabilitering.",
+      "Jag arbetar bland annat med rygg- och nackbesvär, huvudvärk, käkledsbesvär, muskelspänningar, idrottsskador och rehabilitering.",
   },
   {
     question: "Kan jag få behandling på engelska?",
-    answer: "Ja, Hanna tar emot patienter på både svenska och engelska.",
+    answer: "Ja, jag tar emot patienter på både svenska och engelska.",
   },
   {
     question: "Hur bokar jag tid?",
     answer:
-      "Använd bokningsknappen för att se aktuella tider i ClinicBuddy. Du kan också ringa Hanna om du är osäker på om hon kan hjälpa dig.",
+      "Använd bokningsknappen för att se aktuella tider i ClinicBuddy. Du kan också ringa mig om du är osäker på om jag kan hjälpa dig.",
   },
 ];
 
@@ -66,7 +66,7 @@ const pageStructuredData = {
       url: PAGE_URL,
       name: "Naprapat Odenplan & Vasastan | Hanna Magnusson",
       description:
-        "Information och bokning för naprapatbehandling hos Hanna Magnusson nära Odenplan i Stockholm.",
+        "Information om min naprapatbehandling och bokning nära Odenplan i Stockholm.",
       inLanguage: "sv-SE",
       about: [
         { "@id": "https://naprapat-hanna.se/#hanna-magnusson" },
@@ -137,10 +137,9 @@ export default function NaprapatOdenplanPage() {
               Legitimerad naprapat nära Odenplan
             </h1>
             <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
-              Hanna Magnusson hjälper dig med bland annat rygg- och nackbesvär,
-              huvudvärk, käkledsbesvär och idrottsskador. Du hittar mottagningen
-              på Rehabkliniken i Vasastan, cirka fem minuters promenad från
-              Odenplan.
+              Jag hjälper dig med bland annat rygg- och nackbesvär, huvudvärk,
+              käkledsbesvär och idrottsskador. Du hittar mig på Rehabkliniken i
+              Vasastan, cirka fem minuters promenad från Odenplan.
             </p>
             <SymptomCTAButtons source="naprapat_odenplan_hero" />
           </div>
@@ -191,10 +190,10 @@ export default function NaprapatOdenplanPage() {
               Personlig behandling i Vasastan
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Varje besök börjar med att Hanna lyssnar på din beskrivning och
-              undersöker hur besvären påverkar din rörelse och vardag.
-              Behandlingen anpassas efter bedömningen och kan kombineras med råd
-              om träning, ergonomi och återhämtning.
+              Jag börjar varje besök med att lyssna på din beskrivning och
+              undersöka hur besvären påverkar din rörelse och vardag. Jag
+              anpassar behandlingen efter bedömningen och kan kombinera den med
+              råd om träning, ergonomi och återhämtning.
             </p>
           </div>
 
@@ -222,8 +221,8 @@ export default function NaprapatOdenplanPage() {
                 Huvud och käke
               </h3>
               <p className="mb-6 text-muted-foreground">
-                Hanna arbetar med huvudvärk samt spänningar och besvär som kan
-                vara relaterade till nacke eller käkled.
+                Jag arbetar med huvudvärk samt spänningar och besvär som kan vara
+                relaterade till nacke eller käkled.
               </p>
               <Link href="/huvudvark" className="mt-auto text-sm font-medium text-primary hover:underline">
                 Läs om huvudvärk
@@ -270,7 +269,7 @@ export default function NaprapatOdenplanPage() {
               rel="noopener noreferrer"
               className="font-medium text-primary hover:underline"
             >
-              Se Hannas profil hos Rehabkliniken
+              Se min profil hos Rehabkliniken
             </a>
           </div>
 
@@ -294,7 +293,7 @@ export default function NaprapatOdenplanPage() {
                 </span>
                 <div>
                   <h3 className="font-semibold text-foreground">Individuell bedömning</h3>
-                  <p>Hanna förklarar sin bedömning och föreslår ett upplägg.</p>
+                  <p>Jag förklarar min bedömning och föreslår ett upplägg.</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -347,8 +346,8 @@ export default function NaprapatOdenplanPage() {
               Boka naprapat nära Odenplan
             </h2>
             <p className="mb-8 text-lg text-muted-foreground xl:mb-0">
-              Se aktuella tider och boka direkt, eller ring Hanna om du är
-              osäker på om hon kan hjälpa dig.
+              Se aktuella tider och boka direkt, eller ring mig om du är osäker
+              på om jag kan hjälpa dig.
             </p>
           </div>
           <div className="xl:shrink-0">

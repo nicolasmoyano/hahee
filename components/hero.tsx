@@ -32,10 +32,10 @@ export default function Hero() {
               </a>
               <a
                 href="tel:+46737853876"
-                onClick={() => trackButtonClick("Ring Hanna", "hero_home")}
+                onClick={() => trackButtonClick("Ring mig", "hero_home")}
                 className="px-6 py-3 rounded-lg font-medium border-2 border-primary text-green-900 hover:bg-secondary transition text-center"
               >
-                Ring Hanna
+                Ring mig
               </a>
             </div>
           </div>

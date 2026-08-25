@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Naprapat Hanna Magnusson i Stockholm | Smärtlindring & Behandling",
     description:
-      "Naprapat Hanna Magnusson i Stockholm. Legitimerad naprapat sedan 2018. Boka tid för smärtlindring, behandling och rehab. Västmannagatan 40.",
+      "Jag är legitimerad naprapat sedan 2018 och hjälper dig med smärtlindring, behandling och rehab på Västmannagatan 40 i Stockholm.",
     url: "https://naprapat-hanna.se",
     type: "website",
   },
