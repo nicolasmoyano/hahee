@@ -4,7 +4,6 @@ import Hero from "@/components/hero";
 import Services from "@/components/services";
 import SymptomsPreview from "@/components/symptoms-preview";
 import AboutContact from "@/components/about-contact";
-import ConsultationForm from "@/components/consultation-form";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Naprapat Hanna Magnusson i Stockholm | Smärtlindring & Behandling",
     description:
-      "Naprapat Hanna Magnusson i Stockholm. Legitimerad naprapat sedan 2018. Boka tid för smärtlindring, behandling och rehab. Västmannagatan 40.",
+      "Jag är legitimerad naprapat sedan 2018 och hjälper dig med smärtlindring, behandling och rehab på Västmannagatan 40 i Stockholm.",
     url: "https://naprapat-hanna.se",
     type: "website",
   },
@@ -25,7 +24,6 @@ export default function Home() {
       <Hero />
       <Services />
       <SymptomsPreview />
-      <ConsultationForm />
       <AboutContact />
       <Footer />
     </main>

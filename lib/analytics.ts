@@ -33,32 +33,6 @@ export const trackBookingClick = (source: string) => {
   }
 };
 
-/**
- * Track consultation form views
- */
-export const trackConsultationView = (source: string) => {
-  if (typeof window !== 'undefined' && window.dataLayer) {
-    window.dataLayer.push({
-      event: 'consultation_form_view',
-      source: source,
-      event_category: 'engagement',
-    });
-  }
-};
-
-/**
- * Track consultation form submissions
- */
-export const trackConsultationSubmit = (problemAreas: string[]) => {
-  if (typeof window !== 'undefined' && window.dataLayer) {
-    window.dataLayer.push({
-      event: 'consultation_submit',
-      problem_areas: problemAreas.join(', '),
-      event_category: 'conversion',
-      event_label: 'Form Submission',
-    });
-  }
-};
 
 /**
  * Track symptom page views

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
@@ -144,15 +143,13 @@ export default function IschiasPage() {
               Slipp Ischiassmärtan
             </h3>
             <p className="text-muted-foreground mb-6">
-              Boka en konsultation idag och få en behandlingsplan som passar
-              just dina behov.
+              Boka ett besök idag och få en behandlingsplan som passar just dina
+              behov.
             </p>
             <SymptomCTAButtons source="symptom_ischias_cta" />
           </div>
         </div>
       </section>
-
-      <ConsultationForm />
       <Footer />
     </main>
   );

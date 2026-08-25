@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ConsultationForm from "@/components/consultation-form";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import SymptomTracker from "@/components/symptom-tracker";
 import SymptomCTAButtons from "@/components/symptom-cta-buttons";
@@ -188,15 +187,13 @@ export default function RyggsmartaPage() {
               Redo att bli av med ryggsmärtan?
             </h3>
             <p className="text-muted-foreground mb-6">
-              Boka en konsultation idag och ta första steget mot en smärtfri
-              vardag.
+              Boka ett besök idag och ta första steget mot en vardag med mindre
+              smärta.
             </p>
             <SymptomCTAButtons source="symptom_ryggsmarta_cta" />
           </div>
         </div>
       </section>
-
-      <ConsultationForm />
       <Footer />
     </main>
   );

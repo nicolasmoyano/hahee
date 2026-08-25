@@ -59,14 +59,6 @@ export default function Footer() {
                   Kontakt
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/#consultation"
-                  className="text-muted-foreground hover:text-foreground transition"
-                >
-                  Boka Konsultation
-                </Link>
-              </li>
             </ul>
           </div>
           <div>
