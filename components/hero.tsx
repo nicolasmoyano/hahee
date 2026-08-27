@@ -11,13 +11,15 @@ export default function Hero() {
           <div className="space-y-6">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">Naprapat Hanna Magnusson</h1>
-              <h2 className="text-xl">Naprapati för mindre smärta, bättre rörelse och starkare vardag</h2>
+              <h2 className="text-xl">
+                Legitimerad naprapat i Vasastan, nära Odenplan
+              </h2>
               <p className="mt-4 text-lg text-muted-foreground">
                 Jag hjälper dig som upplever smärta, stelhet eller begränsad
                 rörlighet – oavsett om det handlar om vardagsbesvär,
                 stressrelaterade problem, arbetsrelaterad belastning eller
                 träningsskador. Mitt fokus är att förbättra din funktion och ge
-                dig en kropp som håller, länge.
+                dig stöd för en mer hållbar vardag.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -42,9 +44,10 @@ export default function Hero() {
           <div className="relative block">
             <Image
               src="/hero-image.png"
-              alt="Professionell naprapatbehandling"
+              alt="Hanna Magnusson, legitimerad naprapat i Vasastan nära Odenplan"
               width={1200}
               height={800}
+              sizes="(min-width: 1280px) 608px, (min-width: 768px) 50vw, calc(100vw - 48px)"
               className="rounded-lg shadow-lg object-cover w-full h-auto"
               priority
             />

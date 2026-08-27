@@ -5,16 +5,18 @@ import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
 import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+import SymptomPageStructuredData from "@/components/symptom-page-structured-data";
+import MedicalSafetyNote from "@/components/medical-safety-note";
 
 export const metadata: Metadata = {
-  title: "Ischias – Behandling av Nervsmärta i Stockholm | Naprapat Hanna",
+  title: "Ischias | Naprapatbehandling i Vasastan",
   description:
-    "Naprapatbehandling för ischias och strålande nervsmärta i benet. Hitta grundorsaken och få lindring i Stockholm. Boka tid hos legitimerad naprapat.",
+    "Jag undersöker ischiasliknande besvär och strålande smärta i benet och anpassar behandling och råd. Boka naprapat i Vasastan nära Odenplan.",
   alternates: { canonical: "/ischias" },
   openGraph: {
-    title: "Ischias – Behandling av Nervsmärta i Stockholm | Naprapat Hanna",
+    title: "Ischias | Naprapatbehandling i Vasastan",
     description:
-      "Naprapatbehandling för ischias och strålande nervsmärta i benet. Hitta grundorsaken och få lindring.",
+      "Individuell bedömning vid ischiasliknande besvär och strålande smärta i benet i Vasastan nära Odenplan.",
     url: "https://naprapat-hanna.se/ischias",
     type: "website",
   },
@@ -24,6 +26,11 @@ export default function IschiasPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomPageStructuredData
+        path="/ischias"
+        name="Ischias"
+        description="Individuell bedömning vid ischiasliknande besvär och strålande smärta i benet i Vasastan nära Odenplan."
+      />
       <SymptomTracker symptom="Ischias" />
       <SymptomBreadcrumbs currentPage="Ischias" />
 
@@ -34,8 +41,8 @@ export default function IschiasPage() {
             Behandling av Ischias
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Effektiv naprapatbehandling för ischias och strålande smärta i ben.
-            Få lindring och återfå din rörlighet.
+            Individuell bedömning och behandling vid ischiasliknande besvär och
+            strålande smärta i benet.
           </p>
           <SymptomCTAButtons source="symptom_ischias_hero" />
         </div>
@@ -50,16 +57,14 @@ export default function IschiasPage() {
               Vad är Ischias?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Ischias är ett tillstånd där ischiasnerven, kroppens längsta nerv,
-              blir irriterad eller klämd. Nerven går från nedre ryggen genom
-              sätet och ner i benet. När den blir påverkad kan du känna smärta,
-              domningar eller stickningar som strålar från ländryggen ner genom
-              benet, ofta hela vägen till foten.
+              Ischias beskriver smärta och ibland domningar eller stickningar som
+              strålar från ländrygg eller säte ner i benet. Liknande symtom kan
+              ha olika orsaker, så en individuell bedömning är viktig innan ett
+              behandlingsupplägg föreslås.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Vanliga orsaker är diskbråck, förträngning av ryggmärgskanalen,
-              muskelspänningar (särskilt piriformis-muskeln), inflammation eller
-              felställda ryggkotor.
+              Besvären kan bland annat vara kopplade till nervirritation i
+              ländryggen eller påverkan från strukturer i rygg, höft och säte.
             </p>
           </div>
 
@@ -102,14 +107,13 @@ export default function IschiasPage() {
               Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Naprapatbehandling kan vara mycket effektiv för ischias. Jag
-              arbetar med att identifiera och behandla grundorsaken till
-              nervpåverkan. Min behandling fokuserar på:
+              Jag undersöker rörelse, styrka och känsel och anpassar upplägget
+              efter bedömningen. Behandling och råd kan ha som mål att:
             </p>
             <ul className="space-y-2 text-muted-foreground mb-4">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Minska tryck på ischiasnerven</span>
+                <span>Anpassa rörelser och belastning efter symtomen</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
@@ -121,26 +125,27 @@ export default function IschiasPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Minska inflammation och smärta</span>
+                <span>Minska rörelser som provocerar smärtan</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Ge dig övningar för att förebygga återfall</span>
+                <span>Ge dig övningar och råd för fortsatt egenvård</span>
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed">
-              Behandlingen är skonsam och progressiv, anpassad efter dina symtom
-              och smärtnivå. Många patienter upplever lindring redan efter
-              första behandlingen.
+              Upplägget anpassas efter dina symtom och din tolerans. Vid tecken
+              på att besvären behöver medicinsk utredning hänvisar jag vidare.
             </p>
           </div>
 
           <RelatedSymptoms currentSymptom="ischias" />
 
+          <MedicalSafetyNote />
+
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Slipp Ischiassmärtan
+              Boka en bedömning av dina besvär
             </h3>
             <p className="text-muted-foreground mb-6">
               Boka ett besök idag och få en behandlingsplan som passar just dina

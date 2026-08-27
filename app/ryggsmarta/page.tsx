@@ -4,16 +4,18 @@ import Footer from "@/components/footer";
 import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import SymptomTracker from "@/components/symptom-tracker";
 import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+import SymptomPageStructuredData from "@/components/symptom-page-structured-data";
+import MedicalSafetyNote from "@/components/medical-safety-note";
 
 export const metadata: Metadata = {
-  title: "Ryggsmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+  title: "Ryggsmärta & ryggskott | Naprapat i Vasastan",
   description:
-    "Behandling av ryggsmärta i Stockholm. Naprapatbehandling för ländryggssmärta, diskbråck och muskelspänningar. Boka tid hos legitimerad naprapat.",
+    "Jag undersöker ryggsmärta, ryggskott och stelhet och anpassar behandling och råd efter din bedömning. Boka naprapat i Vasastan nära Odenplan.",
   alternates: { canonical: "/ryggsmarta" },
   openGraph: {
-    title: "Ryggsmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+    title: "Ryggsmärta & ryggskott | Naprapat i Vasastan",
     description:
-      "Behandling av ryggsmärta i Stockholm. Naprapatbehandling för ländryggssmärta, diskbråck och muskelspänningar.",
+      "Individuell bedömning och naprapatbehandling vid ryggsmärta, ryggskott och stelhet i Vasastan nära Odenplan.",
     url: "https://naprapat-hanna.se/ryggsmarta",
     type: "website",
   },
@@ -23,6 +25,11 @@ export default function RyggsmartaPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomPageStructuredData
+        path="/ryggsmarta"
+        name="Ryggsmärta och ryggskott"
+        description="Individuell bedömning och naprapatbehandling vid ryggsmärta, ryggskott och stelhet i Vasastan nära Odenplan."
+      />
       <SymptomTracker symptom="Ryggsmärta" />
       <SymptomBreadcrumbs currentPage="Ryggsmärta" />
 
@@ -33,8 +40,8 @@ export default function RyggsmartaPage() {
             Behandling av ryggsmärta
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Naprapatbehandling för att lindra och förebygga ryggsmärta. Få
-            tillbaka din rörlighet och minska smärtan.
+            Jag undersöker hur ryggbesvären påverkar dig och anpassar behandling,
+            råd och övningar efter bedömningen.
           </p>
           <SymptomCTAButtons source="symptom_ryggsmarta_hero" />
         </div>
@@ -56,9 +63,9 @@ export default function RyggsmartaPage() {
               av dålig hållning, överbelastning eller muskulär obalans.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Vanliga orsaker till ryggsmärta inkluderar spända muskler,
-              felställda ryggkotor, diskbråck, stress och ensidig belastning
-              från arbete eller träning.
+              Ryggsmärta kan ha flera orsaker och påverkas bland annat av
+              belastning, aktivitet, återhämtning och tidigare besvär. Därför
+              börjar jag med frågor och en individuell undersökning.
             </p>
           </div>
 
@@ -97,14 +104,14 @@ export default function RyggsmartaPage() {
               Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Som naprapat arbetar jag med att hitta grundorsaken till din
-              ryggsmärta. Genom manuella behandlingstekniker som manipulation,
-              mobilisering och mjukdelsbehandling kan jag:
+              Jag bedömer hur dina besvär påverkar rörelse och vardag. Beroende
+              på bedömningen kan jag använda mobilisering, mjukdelsbehandling,
+              råd och övningar med målet att:
             </p>
             <ul className="space-y-2 text-muted-foreground mb-4">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Minska smärta och inflammation</span>
+                <span>Minska smärta som begränsar vardagen</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
@@ -116,7 +123,7 @@ export default function RyggsmartaPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Ge dig verktyg för att förebygga återfall</span>
+                <span>Ge dig övningar och råd för fortsatt egenvård</span>
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed">
@@ -152,8 +159,7 @@ export default function RyggsmartaPage() {
                   Nacksmärta
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  Nack- och ryggsmärta hänger ofta ihop. Behandla båda för bäst
-                  resultat.
+                  Besvär i nacke, rygg och skuldror kan förekomma samtidigt.
                 </p>
               </a>
               <a
@@ -164,7 +170,7 @@ export default function RyggsmartaPage() {
                   Huvudvärk
                 </h4>
                 <p className="text-sm text-muted-foreground">
-                  Ryggspänningar kan orsaka huvudvärk och migrän.
+                  Besvär i rygg, nacke och skuldror kan förekomma samtidigt.
                 </p>
               </a>
               <a
@@ -181,10 +187,12 @@ export default function RyggsmartaPage() {
             </div>
           </div>
 
+          <MedicalSafetyNote />
+
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Redo att bli av med ryggsmärtan?
+              Boka en bedömning av ryggbesvären
             </h3>
             <p className="text-muted-foreground mb-6">
               Boka ett besök idag och ta första steget mot en vardag med mindre

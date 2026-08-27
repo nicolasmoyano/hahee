@@ -9,7 +9,7 @@ import SymptomCTAButtons from "@/components/symptom-cta-buttons";
 const PAGE_URL = "https://naprapat-hanna.se/naprapat-odenplan";
 
 export const metadata: Metadata = {
-  title: "Naprapat Odenplan & Vasastan | Hanna Magnusson",
+  title: "Legitimerad naprapat nära Odenplan | Hanna Magnusson",
   description:
     "Jag heter Hanna Magnusson och är legitimerad naprapat på Västmannagatan 40 i Vasastan, cirka fem minuter från Odenplan. Boka tid direkt.",
   alternates: { canonical: "/naprapat-odenplan" },
@@ -64,7 +64,7 @@ const pageStructuredData = {
       "@type": "MedicalWebPage",
       "@id": `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: "Naprapat Odenplan & Vasastan | Hanna Magnusson",
+      name: "Legitimerad naprapat nära Odenplan | Hanna Magnusson",
       description:
         "Information om min naprapatbehandling och bokning nära Odenplan i Stockholm.",
       inLanguage: "sv-SE",

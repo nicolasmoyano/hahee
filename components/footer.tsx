@@ -111,13 +111,13 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground">Stockholm, Sverige</p>
             <Link
               href="tel:+46737853876"
-              className="text-sm text-muted-foreground hover:text-foreground transition block"
+              className="block py-1 text-sm text-muted-foreground transition hover:text-foreground"
             >
               +46 73-785 38 76
             </Link>
             <Link
               href="mailto:hannahahee@gmail.com"
-              className="text-sm text-muted-foreground hover:text-foreground transition block"
+              className="block py-1 text-sm text-muted-foreground transition hover:text-foreground"
             >
               hannahahee@gmail.com
             </Link>

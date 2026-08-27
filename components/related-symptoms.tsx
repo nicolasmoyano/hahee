@@ -18,7 +18,7 @@ const allSymptoms: { [key: string]: RelatedSymptom } = {
     title: "Nacksmärta",
     url: "/nacksmarta",
     description:
-      "Nack- och ryggsmärta hänger ofta ihop. Behandla båda för bäst resultat.",
+      "Besvär i nacke, rygg och skuldror kan förekomma samtidigt.",
   },
   ischias: {
     title: "Ischias",

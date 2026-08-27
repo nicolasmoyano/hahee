@@ -5,16 +5,18 @@ import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
 import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+import SymptomPageStructuredData from "@/components/symptom-page-structured-data";
+import MedicalSafetyNote from "@/components/medical-safety-note";
 
 export const metadata: Metadata = {
-  title: "Idrottsskador – Rehab & Behandling i Stockholm | Naprapat Hanna",
+  title: "Idrottsskador & rehab | Naprapat i Vasastan",
   description:
-    "Professionell naprapatbehandling och rehab för idrottsskador i Stockholm. Snabbare återhämtning och förebyggande av nya skador. Boka tid idag.",
+    "Jag undersöker idrottsskador och överbelastningsbesvär och anpassar behandling, rehab och återgång till träning. Boka i Vasastan nära Odenplan.",
   alternates: { canonical: "/idrottsskador" },
   openGraph: {
-    title: "Idrottsskador – Rehab & Behandling i Stockholm | Naprapat Hanna",
+    title: "Idrottsskador & rehab | Naprapat i Vasastan",
     description:
-      "Professionell naprapatbehandling och rehab för idrottsskador i Stockholm. Snabbare återhämtning och förebyggande av nya skador.",
+      "Individuell bedömning, behandling och rehab vid idrottsskador och överbelastningsbesvär i Vasastan nära Odenplan.",
     url: "https://naprapat-hanna.se/idrottsskador",
     type: "website",
   },
@@ -24,6 +26,11 @@ export default function IdrottsskadorPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomPageStructuredData
+        path="/idrottsskador"
+        name="Idrottsskador och rehab"
+        description="Individuell bedömning, behandling och rehab vid idrottsskador och överbelastningsbesvär i Vasastan nära Odenplan."
+      />
       <SymptomTracker symptom="Idrottsskador" />
       <SymptomBreadcrumbs currentPage="Idrottsskador" />
 
@@ -34,8 +41,8 @@ export default function IdrottsskadorPage() {
             Behandling av idrottsskador
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Professionell naprapatbehandling och rehab för idrottsskador. Få
-            rätt behandling för snabbare återhämtning och förebygg nya skador.
+            Individuell bedömning, behandling och rehab vid idrottsskador och
+            överbelastningsbesvär.
           </p>
           <SymptomCTAButtons source="symptom_idrottsskador_hero" />
         </div>
@@ -103,19 +110,17 @@ export default function IdrottsskadorPage() {
               Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Som naprapat specialiserar jag mig på att behandla och
-              rehabilitera idrottsskador. Min behandling är målinriktad och
-              anpassad för att få dig tillbaka till din sport så snabbt och
-              säkert som möjligt:
+              Jag undersöker skadan, din belastning och vad du vill kunna göra
+              igen. Upplägget anpassas efter bedömningen och kan innehålla:
             </p>
             <ul className="space-y-2 text-muted-foreground mb-4">
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Noggrann bedömning och diagnostik</span>
+                <span>Individuell undersökning och bedömning</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Akutbehandling för att minska inflammation</span>
+                <span>Råd om belastning i den tidiga fasen</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
@@ -139,12 +144,14 @@ export default function IdrottsskadorPage() {
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed">
-              Målet är inte bara att behandla skadan, utan också att göra dig
-              starkare och mer motståndskraftig för att undvika framtida skador.
+              Målet är en stegvis och trygg återgång till den aktivitet som är
+              viktig för dig.
             </p>
           </div>
 
           <RelatedSymptoms currentSymptom="idrottsskador" />
+
+          <MedicalSafetyNote />
 
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
