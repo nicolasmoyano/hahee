@@ -110,26 +110,11 @@ const structuredData = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://naprapat-hanna.se"),
-  title:
-    "Naprapat Hanna Magnusson i Stockholm | Smärtlindring & Behandling",
+  title: "Naprapat Odenplan & Vasastan | Hanna Magnusson",
   description:
-    "Jag är legitimerad naprapat sedan 2018 och hjälper dig med smärtlindring, behandling och rehab på Västmannagatan 40 i Stockholm.",
+    "Jag är legitimerad naprapat på Västmannagatan 40 i Vasastan, cirka fem minuter från Odenplan. Boka en tid för individuell bedömning och behandling.",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
   },
 };
 

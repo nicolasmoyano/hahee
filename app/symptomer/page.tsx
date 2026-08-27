@@ -5,16 +5,16 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Symptom & Behandlingar | Naprapat Hanna Stockholm",
+  title: "Symtom & behandlingar | Naprapat i Vasastan",
   description:
     "Naprapatbehandling för ryggsmärta, nacksmärta, ischias, huvudvärk och idrottsskador i Stockholm. Upptäck hur naprapati kan hjälpa dig med dina besvär.",
   keywords:
     "naprapati, naprapat stockholm, ryggsmärta, nacksmärta, ischias, huvudvärk, idrottsskador, behandling",
   alternates: { canonical: "/symptomer" },
   openGraph: {
-    title: "Symptom & Behandlingar | Naprapat Hanna",
+    title: "Symtom & behandlingar | Naprapat i Vasastan",
     description:
-      "Professionell naprapatbehandling för olika symptom och besvär i Stockholm.",
+      "Läs om individuell bedömning och naprapatbehandling vid vanliga besvär i Vasastan nära Odenplan.",
     url: "https://naprapat-hanna.se/symptomer",
     type: "website",
   },
@@ -25,14 +25,14 @@ const symptoms = [
     title: "Ryggsmärta",
     slug: "ryggsmarta",
     description:
-      "Behandling av ländryggssmärta, diskbråck och muskulära spänningar i ryggen. Naprapatbehandling kan effektivt lindra akut och kronisk ryggsmärta.",
+      "Läs om individuell bedömning och behandling vid ländryggssmärta, ryggskott, stelhet och muskulära spänningar.",
     keywords: ["Ländryggssmärta", "Diskbråck", "Muskelspänningar", "Stelhet"],
   },
   {
     title: "Nacksmärta",
     slug: "nacksmarta",
     description:
-      "Lindring av nackspänningar, whiplash och stelhet i nacke och skuldror. Effektiv behandling för både akuta och kroniska nackbesvär.",
+      "Läs om individuell bedömning och behandling vid nacksmärta, nackspärr och stelhet i nacke och skuldror.",
     keywords: [
       "Nackspänningar",
       "Whiplash",
@@ -44,21 +44,21 @@ const symptoms = [
     title: "Ischias",
     slug: "ischias",
     description:
-      "Behandling av ischiassmärta som strålar från ryggen ner i benet. Naprapati kan hjälpa till att lindra nervsmärta och förbättra rörligheten.",
+      "Läs om bedömning av ischiasliknande besvär, nervpåverkan och smärta som strålar från rygg eller säte ner i benet.",
     keywords: ["Ischiassmärta", "Nervsmärta", "Diskbråck", "Smärta i benet"],
   },
   {
     title: "Huvudvärk & spänningar",
     slug: "huvudvark",
     description:
-      "Behandling av spänningshuvudvärk, migrän och huvudvärk orsakad av nackspänningar. Manuell behandling kan ge långvarig lindring.",
-    keywords: ["Spänningshuvudvärk", "Migrän", "TMJ", "Käkledsbesvär"],
+      "Läs om bedömning vid spänningsrelaterad huvudvärk och besvär som kan förekomma tillsammans med spänningar i nacke eller käke.",
+    keywords: ["Spänningshuvudvärk", "Nackspänningar", "TMJ", "Käkledsbesvär"],
   },
   {
     title: "Idrottsskador",
     slug: "idrottsskador",
     description:
-      "Rehab och behandling av träningsskador, muskelskador och överbelastning. Få hjälp att återhämta dig och förebygga framtida skador.",
+      "Läs om individuell bedömning, behandling och rehab vid träningsskador, överbelastning och återgång till aktivitet.",
     keywords: ["Träningsskador", "Muskelskador", "Löparknä", "Tennisarmbåge"],
   },
 ];
@@ -79,7 +79,7 @@ export default function SymptomerPage() {
               Hem
             </Link>
             <span className="mx-2 text-muted-foreground/50">/</span>
-            <span className="text-foreground">Symptomer</span>
+            <span className="text-foreground">Symtom</span>
           </nav>
         </div>
       </div>
@@ -89,12 +89,12 @@ export default function SymptomerPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Symptom & besvär vi behandlar
+              Symtom & besvär jag behandlar
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Som naprapat behandlar jag ett brett spektrum av muskuloskeletala
-              besvär. Här hittar du information om vanliga symptom och hur
-              naprapatbehandling kan hjälpa dig att må bättre.
+              besvär. Här hittar du information om vanliga symtom och hur jag
+              bedömer och anpassar behandlingen.
             </p>
           </div>
         </div>
@@ -191,8 +191,8 @@ export default function SymptomerPage() {
               <p>
                 Varje behandling anpassas efter dina individuella behov och mål.
                 Under första besöket gör jag en noggrann undersökning för att
-                hitta grundorsaken till dina besvär och skapa en behandlingsplan
-                som passar just dig.
+                bedöma hur besvären påverkar dig och föreslå ett upplägg som
+                passar dina förutsättningar.
               </p>
             </div>
           </div>

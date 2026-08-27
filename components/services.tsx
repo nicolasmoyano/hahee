@@ -21,7 +21,7 @@ export default function Services() {
     {
       title: "Förebyggande Vård",
       description:
-        "Du kan också komma för att förebygga besvär innan de uppstår. Jag hjälper dig att bygga en starkare och mer hållbar kropp, oavsett mål – från smärtfri promenad till trygg träning.",
+        "Du kan också komma för att arbeta förebyggande. Jag hjälper dig att bygga en starkare och mer hållbar kropp, oavsett mål – från promenader med mindre besvär till trygg träning.",
       icon: "🛡️",
     },
   ];

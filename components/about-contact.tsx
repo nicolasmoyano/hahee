@@ -86,17 +86,17 @@ export default function AboutContact() {
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Jag är legitimerad naprapat sedan 2018 och arbetar för att
-                  hjälpa dig till en mer rörlig, stark och smärtfri vardag. Min
+                  hjälpa dig till en mer rörlig och stark vardag med mindre
+                  besvär. Min
                   bakgrund inom dans, yoga och styrketräning har gett mig en
                   djup förståelse för hur kroppen rör sig och vad som händer när
                   något inte fungerar som det ska.
                 </p>
                 <p>
-                  I mitt arbete fokuserar jag på att hitta den verkliga orsaken
-                  bakom dina besvär. Jag kombinerar manuell behandling med
-                  individanpassade råd kring träning, hållning och återhämtning
-                  för att ge dig långsiktiga resultat, inte bara tillfällig
-                  lindring.
+                  I mitt arbete fokuserar jag på att förstå vilka faktorer som
+                  kan bidra till dina besvär. Jag kombinerar manuell behandling med
+                  individanpassade råd kring träning, hållning och återhämtning.
+                  Upplägget utgår från dina mål och följs upp över tid.
                 </p>
                 <p>
                   Oavsett om du kommer med akuta problem, långvarig smärta eller

@@ -5,16 +5,18 @@ import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
 import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+import SymptomPageStructuredData from "@/components/symptom-page-structured-data";
+import MedicalSafetyNote from "@/components/medical-safety-note";
 
 export const metadata: Metadata = {
-  title: "Nacksmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+  title: "Nacksmärta & nackspärr | Naprapat i Vasastan",
   description:
-    "Naprapatbehandling för nacksmärta, whiplash och nackspänningar i Stockholm. Effektiv behandling för akuta och kroniska nackbesvär. Boka tid.",
+    "Jag undersöker nacksmärta, nackspärr och stelhet och anpassar behandling och råd efter din bedömning. Boka naprapat i Vasastan nära Odenplan.",
   alternates: { canonical: "/nacksmarta" },
   openGraph: {
-    title: "Nacksmärta – Naprapatbehandling i Stockholm | Naprapat Hanna",
+    title: "Nacksmärta & nackspärr | Naprapat i Vasastan",
     description:
-      "Naprapatbehandling för nacksmärta, whiplash och nackspänningar i Stockholm. Effektiv behandling för akuta och kroniska nackbesvär.",
+      "Individuell bedömning och naprapatbehandling vid nacksmärta, nackspärr och stelhet i Vasastan nära Odenplan.",
     url: "https://naprapat-hanna.se/nacksmarta",
     type: "website",
   },
@@ -24,6 +26,11 @@ export default function NacksmartaPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomPageStructuredData
+        path="/nacksmarta"
+        name="Nacksmärta och nackspärr"
+        description="Individuell bedömning och naprapatbehandling vid nacksmärta, nackspärr och stelhet i Vasastan nära Odenplan."
+      />
       <SymptomTracker symptom="Nacksmärta" />
       <SymptomBreadcrumbs currentPage="Nacksmärta" />
 
@@ -34,8 +41,8 @@ export default function NacksmartaPage() {
             Behandling av nacksmärta
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Effektiv naprapatbehandling för nacksmärta, stelhet och spänningar.
-            Få hjälp med både akuta och kroniska nackbesvär.
+            Individuell bedömning och naprapatbehandling vid nacksmärta, stelhet
+            och spänningar.
           </p>
           <SymptomCTAButtons source="symptom_nacksmarta_hero" />
         </div>
@@ -102,9 +109,9 @@ export default function NacksmartaPage() {
               Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Naprapatbehandling är mycket effektiv för nacksmärta. Jag arbetar
-              med hela axel-nack-regionen för att hitta och behandla
-              grundorsaken till dina besvär. Min behandling inkluderar:
+              Jag undersöker nacke, skuldror och relevanta rörelser för att
+              förstå hur besvären påverkar dig. Behandlingen anpassas efter
+              bedömningen och kan innehålla:
             </p>
             <ul className="space-y-2 text-muted-foreground mb-4">
               <li className="flex items-start gap-2">
@@ -136,10 +143,12 @@ export default function NacksmartaPage() {
 
           <RelatedSymptoms currentSymptom="nacksmarta" />
 
+          <MedicalSafetyNote />
+
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Få lindring från nacksmärtan
+              Boka en bedömning av nackbesvären
             </h3>
             <p className="text-muted-foreground mb-6">
               Boka ett besök och få en individuellt anpassad behandling för

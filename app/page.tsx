@@ -9,9 +9,9 @@ import Footer from "@/components/footer";
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Naprapat Hanna Magnusson i Stockholm | Smärtlindring & Behandling",
+    title: "Naprapat Odenplan & Vasastan | Hanna Magnusson",
     description:
-      "Jag är legitimerad naprapat sedan 2018 och hjälper dig med smärtlindring, behandling och rehab på Västmannagatan 40 i Stockholm.",
+      "Jag är legitimerad naprapat på Västmannagatan 40 i Vasastan, cirka fem minuter från Odenplan. Boka en tid för individuell bedömning och behandling.",
     url: "https://naprapat-hanna.se",
     type: "website",
   },

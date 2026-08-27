@@ -5,16 +5,18 @@ import SymptomBreadcrumbs from "@/components/symptom-breadcrumbs";
 import RelatedSymptoms from "@/components/related-symptoms";
 import SymptomTracker from "@/components/symptom-tracker";
 import SymptomCTAButtons from "@/components/symptom-cta-buttons";
+import SymptomPageStructuredData from "@/components/symptom-page-structured-data";
+import MedicalSafetyNote from "@/components/medical-safety-note";
 
 export const metadata: Metadata = {
-  title: "Huvudvärk & Spänningar – Behandling i Stockholm | Naprapat Hanna",
+  title: "Spänningshuvudvärk | Naprapat i Vasastan",
   description:
-    "Naprapatbehandling för spänningshuvudvärk och migrän i Stockholm. Behandla grundorsaken i nacke och axlar. Boka tid hos legitimerad naprapat.",
+    "Jag undersöker spänningsrelaterad huvudvärk och besvär från nacke, axlar och käke. Boka naprapat i Vasastan nära Odenplan.",
   alternates: { canonical: "/huvudvark" },
   openGraph: {
-    title: "Huvudvärk & Spänningar – Behandling i Stockholm | Naprapat Hanna",
+    title: "Spänningshuvudvärk | Naprapat i Vasastan",
     description:
-      "Naprapatbehandling för spänningshuvudvärk och migrän i Stockholm. Behandla grundorsaken i nacke och axlar.",
+      "Individuell bedömning vid spänningsrelaterad huvudvärk och besvär från nacke, axlar och käke i Vasastan.",
     url: "https://naprapat-hanna.se/huvudvark",
     type: "website",
   },
@@ -24,6 +26,11 @@ export default function HuvudvarkPage() {
   return (
     <main className="flex flex-col min-h-screen">
       <Header />
+      <SymptomPageStructuredData
+        path="/huvudvark"
+        name="Spänningshuvudvärk"
+        description="Individuell bedömning vid spänningsrelaterad huvudvärk och besvär från nacke, axlar och käke i Vasastan."
+      />
       <SymptomTracker symptom="Huvudvärk" />
       <SymptomBreadcrumbs currentPage="Huvudvärk" />
 
@@ -34,8 +41,8 @@ export default function HuvudvarkPage() {
             Behandling av huvudvärk & spänningar
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
-            Effektiv naprapatbehandling för huvudvärk, migrän och
-            spänningshuvudvärk. Få lindring och förebygg återkommande besvär.
+            Individuell bedömning vid spänningsrelaterad huvudvärk och besvär
+            från nacke, axlar eller käke.
           </p>
           <SymptomCTAButtons source="symptom_huvudvark_hero" />
         </div>
@@ -52,9 +59,9 @@ export default function HuvudvarkPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Huvudvärk är ett mycket vanligt besvär som kan ha många olika
               orsaker. Den vanligaste typen är spänningshuvudvärk, som ofta
-              orsakas av muskelspänningar i nacke, axlar och käkar. Många
-              upplever också migrän eller huvudvärk som utlöses av stress, dålig
-              hållning eller felställda nackkotor.
+              kan upplevas tillsammans med spänningar i nacke, axlar eller käke.
+              Huvudvärk kan samtidigt ha många olika orsaker och behöver bedömas
+              utifrån symtom och sjukdomshistoria.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Vanliga orsaker inkluderar muskelspänningar i nacke och skuldror,
@@ -104,10 +111,9 @@ export default function HuvudvarkPage() {
               Hur kan naprapati hjälpa?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Naprapatbehandling kan vara mycket effektiv för många typer av
-              huvudvärk, särskilt spänningshuvudvärk och huvudvärk som utgår
-              från nacken. Jag arbetar med att behandla de bakomliggande
-              orsakerna:
+              Vid spänningsrelaterade besvär undersöker jag bland annat nacke,
+              skuldror, käke och relevanta rörelser. Beroende på bedömningen kan
+              behandlingen innehålla:
             </p>
             <ul className="space-y-2 text-muted-foreground mb-4">
               <li className="flex items-start gap-2">
@@ -124,7 +130,7 @@ export default function HuvudvarkPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
-                <span>Förbättra blodcirkulationen till huvudet</span>
+                <span>Individuellt anpassade rörelseövningar</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary mt-1">✓</span>
@@ -136,22 +142,23 @@ export default function HuvudvarkPage() {
               </li>
             </ul>
             <p className="text-muted-foreground leading-relaxed">
-              Behandlingen är skonsam och många patienter upplever att både
-              frekvensen och intensiteten av huvudvärken minskar efter
-              regelbunden behandling.
+              Upplägget anpassas efter dina symtom. Ny, plötslig eller ovanligt
+              svår huvudvärk ska bedömas av sjukvården.
             </p>
           </div>
 
           <RelatedSymptoms currentSymptom="huvudvark" />
 
+          <MedicalSafetyNote />
+
           {/* CTA */}
           <div className="bg-secondary/50 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Slipp huvudvärken
+              Boka en bedömning av huvudvärken
             </h3>
             <p className="text-muted-foreground mb-6">
-              Boka ett besök och få hjälp att hitta orsaken till din huvudvärk
-              och en behandling som fungerar för dig.
+              Boka ett besök för en individuell bedömning och ett upplägg som
+              anpassas efter dina symtom.
             </p>
             <SymptomCTAButtons source="symptom_huvudvark_cta" />
           </div>
