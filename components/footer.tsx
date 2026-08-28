@@ -37,6 +37,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/priser"
+                  className="text-muted-foreground hover:text-foreground transition"
+                >
+                  Priser
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/naprapat-odenplan"
                   className="text-muted-foreground hover:text-foreground transition"
                 >

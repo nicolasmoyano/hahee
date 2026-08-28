@@ -82,6 +82,13 @@ export default function Header() {
           </Link>
 
           <Link
+            href="/priser"
+            className="text-sm text-muted-foreground hover:text-foreground transition"
+          >
+            Priser
+          </Link>
+
+          <Link
             href="/#about"
             className="text-sm text-muted-foreground hover:text-foreground transition"
           >
@@ -207,6 +214,14 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Naprapat Odenplan
+            </Link>
+
+            <Link
+              href="/priser"
+              className="text-sm text-muted-foreground hover:text-foreground transition"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Priser
             </Link>
 
             <Link
