@@ -121,6 +121,19 @@ export default function Footer() {
             >
               hannahahee@gmail.com
             </Link>
+            <div className="mt-5 border-t border-border pt-5">
+              <p className="mb-3 text-sm text-muted-foreground">
+                Vill du lättare hitta mina råd i Google?
+              </p>
+              <a
+                href="https://www.google.com/preferences/source?q=naprapat-hanna.se"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center justify-center rounded-md border border-foreground px-4 py-2 text-center text-sm font-medium text-foreground transition hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              >
+                Välj som källa i Google
+              </a>
+            </div>
           </div>
         </div>
         <div className="border-t border-border pt-8">
