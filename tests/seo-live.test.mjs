@@ -90,6 +90,15 @@ test("medical pages avoid unsupported outcome claims and include escalation guid
   }
 });
 
+test("homepage includes the Google preferred-source deeplink", async () => {
+  const html = await get("/");
+  assert.match(
+    html,
+    /https:\/\/www\.google\.com\/preferences\/source\?q=naprapat-hanna\.se/,
+  );
+  assert.match(html, /Välj som källa i Google/);
+});
+
 test("declared site icon exists", async () => {
   const response = await fetch(new URL("/icon.svg", baseUrl));
   assert.equal(response.status, 200);
