@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test:seo": "node --test tests/seo-live.test.mjs"
+    "test:seo": "node --test tests/seo-live.test.mjs",
+    "test:indexnow": "node --test tests/indexnow.test.mjs",
+    "submit:indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
