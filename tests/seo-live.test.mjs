@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const baseUrl = process.env.BASE_URL ?? "http://127.0.0.1:3100";
@@ -104,6 +105,12 @@ test("declared site icon exists", async () => {
   const response = await fetch(new URL("/icon.svg", baseUrl));
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /svg/);
+});
+
+test("booking analytics keeps CTA placement separate from traffic source", async () => {
+  const analytics = await readFile(new URL("../lib/analytics.ts", import.meta.url), "utf8");
+  assert.match(analytics, /cta_location:\s*source/);
+  assert.doesNotMatch(analytics, /\n\s*source:\s*source/);
 });
 
 test("IndexNow verification key is publicly readable", async () => {

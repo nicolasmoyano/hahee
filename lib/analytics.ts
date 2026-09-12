@@ -26,7 +26,9 @@ export const trackBookingClick = (source: string) => {
   if (typeof window !== 'undefined' && window.dataLayer) {
     window.dataLayer.push({
       event: 'booking_initiated',
-      source: source,
+      // `source` overlaps with GA4 traffic-attribution terminology. A custom
+      // name keeps CTA placement data separate from acquisition reporting.
+      cta_location: source,
       event_category: 'engagement',
       event_label: 'Boka nu',
     });
