@@ -10,6 +10,7 @@ const symptomRoutes = [
   "/idrottsskador",
 ];
 const allRoutes = ["/", "/symptomer", "/naprapat-odenplan", ...symptomRoutes];
+const indexNowKey = "5fbbc9684ea4578aeb2d3dae25ce1aa0";
 
 async function get(path) {
   const response = await fetch(new URL(path, baseUrl));
@@ -103,4 +104,10 @@ test("declared site icon exists", async () => {
   const response = await fetch(new URL("/icon.svg", baseUrl));
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /svg/);
+});
+
+test("IndexNow verification key is publicly readable", async () => {
+  const response = await fetch(new URL(`/${indexNowKey}.txt`, baseUrl));
+  assert.equal(response.status, 200);
+  assert.equal((await response.text()).trim(), indexNowKey);
 });
