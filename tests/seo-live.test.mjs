@@ -10,7 +10,13 @@ const symptomRoutes = [
   "/huvudvark",
   "/idrottsskador",
 ];
-const allRoutes = ["/", "/symptomer", "/naprapat-odenplan", ...symptomRoutes];
+const allRoutes = [
+  "/",
+  "/symptomer",
+  "/naprapat-odenplan",
+  "/priser",
+  ...symptomRoutes,
+];
 const indexNowKey = "5fbbc9684ea4578aeb2d3dae25ce1aa0";
 
 async function get(path) {
@@ -55,6 +61,14 @@ test("all indexable pages have concise, unique titles", async () => {
     titles.push(title);
   }
   assert.equal(new Set(titles).size, titles.length, "page titles must be unique");
+});
+
+test("sitemap lists every indexable page", async () => {
+  const sitemap = await get("/sitemap.xml");
+  for (const route of allRoutes) {
+    const url = new URL(route, "https://naprapat-hanna.se").toString();
+    assert.match(sitemap, new RegExp(`<loc>${url}</loc>`), `${route} is missing from sitemap`);
+  }
 });
 
 test("symptom pages expose connected webpage and breadcrumb schema", async () => {
